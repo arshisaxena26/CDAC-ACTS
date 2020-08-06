@@ -2,6 +2,6 @@
 
 #!/bin/bash
 
-ls -l ./ | cut -d " " -f1
+ls -l ./ | sed '1d' | cut -d " " -f1
 
 

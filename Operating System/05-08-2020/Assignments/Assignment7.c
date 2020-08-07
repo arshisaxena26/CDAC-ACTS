@@ -6,6 +6,8 @@
 For Compilation type : gcc -pthread Assignment7.c		
 */
 
+//-------------------METHOD 1----------------------
+
 #include<pthread.h>
 #include<stdio.h>
 
@@ -48,3 +50,46 @@ void *Table3(void *param)
 	
 	pthread_exit(0);
 	}
+
+//-------------------METHOD 2----------------------
+//Removing Redundant Code
+
+#include<pthread.h>
+#include<stdio.h>
+
+#define T_Num 2
+
+void *printTable(void *param);
+
+int main()
+{
+	int num_array[]={2,3};
+	
+	pthread_t tid[T_Num];
+	
+	int i;
+	for(i=0;i<T_Num;i++)
+		pthread_create(&tid[i], NULL, printTable,&num_array[i]);
+
+	for(i=0;i<T_Num;i++)
+	{	
+		pthread_join(tid[i],NULL);
+		sleep(1);
+	}
+}
+
+void *printTable(void *param)
+{
+	int i;
+	int *num=(int*)param;
+	
+	for(i=1;i<=10;i++)
+		printf("%d * %d = %d\n",*num,i,((*num)*i));
+	
+	printf("\n");
+	
+	pthread_exit(0);
+	}
+
+
+

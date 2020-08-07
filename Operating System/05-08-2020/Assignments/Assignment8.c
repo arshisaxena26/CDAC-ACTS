@@ -9,22 +9,9 @@
 
 int count=0;
 
-void* Main(void* arg);
 void* countInc(void* arg);
 
-int main()
-{
-	pthread_t mainT;
-
-	pthread_create(&mainT,NULL,Main,NULL);
-
-	pthread_join(mainT,NULL);
-
-	printf("Total Count is: %d\n",count);
-
-	}
-
-void* Main(void* arg)
+int main
 {
 	int i,ThreadNum=2;
 
@@ -36,16 +23,15 @@ void* Main(void* arg)
 	for(i=0;i<ThreadNum;i++)
 		pthread_join(threads[i],NULL);
 
-	pthread_exit(0);
+	printf("Total Count is: %d\n",count);
 	}
 
 void* countInc(void* arg)
 {
 	int i;
 
-	for(i=0;i<10;i++)
+	for(i=0;i<10000;i++)
 		count++;
 
 	pthread_exit(0);
 	}
-

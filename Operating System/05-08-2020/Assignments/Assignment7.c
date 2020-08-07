@@ -14,15 +14,17 @@ void *Table3(void *param);
 
 int main()
 {
-	pthread_t tid;
+	pthread_t tid2;
+	pthread_t tid3;
 	
 	pthread_attr_t attr;
 	pthread_attr_init(&attr);
 	
-	pthread_create(&tid, &attr, Table2, NULL);
-	pthread_create(&tid, &attr, Table3, NULL);
+	pthread_create(&tid2, &attr, Table2, NULL);
+	pthread_create(&tid3, &attr, Table3, NULL);
 	
-	pthread_join(tid,NULL);
+	pthread_join(tid2,NULL);
+	pthread_join(tid3,NULL);
 }
 
 void *Table2(void *param)
@@ -32,7 +34,7 @@ void *Table2(void *param)
 		printf("2 * %d = %d\n",i,2*i);
 		
 	printf("\n");	
-	
+	sleep(1);
 	pthread_exit(0);
 	}
 

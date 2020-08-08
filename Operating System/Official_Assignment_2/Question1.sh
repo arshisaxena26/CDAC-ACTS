@@ -31,7 +31,7 @@ while [ 1 ]
 
 		2)killall -9 $pname;;
 
-		3)strace -f date;;  #check
+		3)strace -f date;;
 
 		4)break;;
 

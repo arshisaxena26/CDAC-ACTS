@@ -16,7 +16,7 @@ class Assignment3
 		{	
 			System.out.println("-----------Menu----------");
 			System.out.println("1. Plain Dosa     Rs 50/-");
-			System.out.println("2. Pizza          Rs 20/-");
+			System.out.println("2. Pizza          Rs 120/-");
 			System.out.println("3. Burger         Rs 40/-");
 			System.out.println("-------------------------");
 			System.out.println("4. Generate Bill Amount");
@@ -34,7 +34,7 @@ class Assignment3
 				case 2:
 					System.out.print("Enter Quantity: ");
 					quantity=sc.nextInt();
-					sum+=quantity*20;
+					sum+=quantity*120;
 					break;
 				case 3:
 					System.out.print("Enter Quantity: ");

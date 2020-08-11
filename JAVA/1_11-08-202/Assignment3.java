@@ -48,6 +48,7 @@ class Assignment3
 					System.out.println("Invalid Input. Try Again!");
 					break;
 			}
+			sc.close();
 		}
 	}
 }

@@ -1,0 +1,19 @@
+OSC Official Internal Assignment 2 
+Dated : 08-08-2020
+
+
+1. Write a menu driven shell script: (2Marks)
+	a) Find process id of process given by user(User should give the process name)
+	b) Kill the process using -9 signal.
+        c) Execute date command with strace. Find the statement where bash is creating child process
+
+2. Write command find the process in Sleep state. (1Mark)
+
+3. Write a program to start two threads: (3Marks)
+a) First thread should store elements in the global array (Take integer input from user)	
+b) Second thread should print the whole array in single line(Use sleep to stop this thread for few seconds)
+
+4. Write a program to implement named pipe (4Marks)
+a) Pass stream of numbers from parent to child(Pass numbers from 1 to 5)
+b) Child should print the numbers on terminal
+c) Use exec to create directory ‘data’ at current location after receiving numbers

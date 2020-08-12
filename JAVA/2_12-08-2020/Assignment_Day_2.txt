@@ -1,70 +1,21 @@
-Day 1
+Question:
 
-1. 
-Accept  i/ps from User , till user enters "quit" or any other option.
-I/P : operation(add|sub|mult|div) , number1(double) , number2(double) 
-Display the result of the operation.
-
-2. Accept 2 double values from User (using Scanner). Check data type.
-. If arguments are not doubles , supply suitable error message & terminate.
-If numbers are double values , print its average.
-
-3. Display food menu to user. Assign fixed prices to food items.
-User will select items from menu along with the quantity. (eg 1. Dosa 2. Samosa 3. Rice 4. Noodles .......10 . Generate Bill ) When user enters 'Generate Bill' option, display total bill & exit.
-
-Day 2 
-1. Revise class work
-2. Complete pending assignments.
-3. Solve Tank assignment along with memory picture.
-
-class Tank {
-  private int level;
-  Tank(int l)
-   {
-     level=l;
-   }
-  public void setLevel(int level1)
-  {
-    level=level1;
-  }
-  public int getLevel()
-  {
-    return level;
-  }
-}	
-
-public class Assignment {
-  public static void main(String[] args) {
-    Tank t1 = new Tank(10);
-    Tank t2 = new Tank(20);
-   
-    s.o.p("1: t1.level: " + t1.getLevel() +
-          ", t2.level: " + t2.getLevel());
-    t1 = t2;
-    s.o.p("2: t1.level: " + t1.getLevel() +
-          ", t2.level: " + t2.getLevel());
-    t1.setLevel(27);
-     s.o.p("3: t1.level: " + t1.getLevel() +
-          ", t2.level: " + t2.getLevel());
-    t2.setLevel(t1.getLevel()+10);
-     s.o.p("4: t1.level: " + t1.getLevel() +
-          ", t2.level: " + t2.getLevel());
-  }
-}
-4. Create a java applicstion for the following.
- Create a Customer class , with data members (all private : tight encapsulation)
-name(String),email(String),age(int), creditLimit(double)
+Create a java application for the following.
+  Create a Customer class , with data members (all private : tight encapsulation)
+  name(String),email(String),age(int), creditLimit(double)
 
 4.1 Supply a parameterized constructor to accept all details from user
+
 4.2 Supply an argument less  constructor to init default name to "Riya" , email to "riya@gmail.com",age=25,creditLimit=10000
+
 4.3 Supply another constructor , to init default creditLimit to 15000, taking rest of the i/ps from user.
+
 4.4 Write a method , getDetails to return string form of customer name & credit limit details.
+
 4.5 Supply getter & setter for creditLimit.
 
-Note : Currently constructor chaining is not discussed. But can be discussed in the lab & make use of it then.
-
 4.6 Create a TestCustomer class . Use scanner to accept user i/ps.
-Create 3 customers using 3 different constructors(4.1 : c1 ,4.2 : c2,4.3 :c3 )
-Display customer details of all customers.
-Prompt user , for changing creditLimit of the c3.
-Display new credit limit on the console.
+    Create 3 customers using 3 different constructors(4.1 : c1 ,4.2 : c2,4.3 :c3 )
+    Display customer details of all customers.
+    Prompt user , for changing creditLimit of the c3.
+    Display new credit limit on the console.

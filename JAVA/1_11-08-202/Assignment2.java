@@ -15,9 +15,7 @@ class Assignment2
 		
 		double num1=0,num2=0;
 
-		boolean isDouble=sc.hasNextDouble();
-
-		if(isDouble) 
+		if(sc.hasNextDouble()) 
 			num1=sc.nextDouble();
 		else 
 		{
@@ -25,9 +23,7 @@ class Assignment2
 			return;
 		}
 		
-		isDouble=sc.hasNextDouble();
-
-		if(isDouble) 
+		if(sc.hasNextDouble()) 
 			num2=sc.nextDouble();
 		else 
 		{

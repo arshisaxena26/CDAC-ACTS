@@ -3,20 +3,23 @@
 		name(String),email(String),age(int), creditLimit(double)
 
 4.1 Supply a parameterized constructor to accept all details from user
+
 4.2 Supply an argument less  constructor to init default name to "Riya" , email to "riya@gmail.com",age=25,creditLimit=10000
+
 4.3 Supply another constructor , to init default creditLimit to 15000, taking rest of the i/ps from user.
+
 4.4 Write a method , getDetails to return string form of customer name & credit limit details.
+
 4.5 Supply getter & setter for creditLimit.
 
-Note : Currently constructor chaining is not discussed. But can be discussed in the lab & make use of it then.
-
 4.6 Create a TestCustomer class . Use scanner to accept user i/ps.
-Create 3 customers using 3 different constructors(4.1 : c1 ,4.2 : c2,4.3 :c3 )
-Display customer details of all customers.
-Prompt user , for changing creditLimit of the c3.
-Display new credit limit on the console.
+	Create 3 customers using 3 different constructors(4.1 : c1 ,4.2 : c2,4.3 :c3 )
+	Display customer details of all customers.
+	Prompt user , for changing creditLimit of the c3.
+	Display new credit limit on the console.
 
 */
+
 import java.util.Scanner;
 class Customer
 {

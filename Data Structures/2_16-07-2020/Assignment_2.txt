@@ -1,0 +1,7 @@
+Day 2 ADS
+Date : 16-07-2020
+
+Assignment 1 : Modify HashTable_Basic implementation to support for negative numbers to be stored in Hash Table.
+
+Assignment 2 : HashTable_Basic implementation does not handle collision. Modify the implementation of "Bucket" to handle collision via Chaining. 
+Each Bucket will be implemented as a head node of a linked list. Every time an element is to be stored in the bucket, we will add it as a new node at the beginning of the linked list.

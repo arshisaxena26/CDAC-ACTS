@@ -1,0 +1,9 @@
+ADS LAB DAY 5 :
+
+Assignment 1: Implement DFS and BFS for directed graph stored in Adjacency List. 
+		(You can use the code implemented in Graph_AdjList.cpp).
+
+Assignment 2: Count number of connected components in an undirected graph. 
+		(You can use the code implemented in Graph_AdjMatrix.cpp)
+
+Assignment 3: Implement Dijkstra's Shortest Path Algorithm.

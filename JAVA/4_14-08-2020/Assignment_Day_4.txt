@@ -1,0 +1,64 @@
+Day 4
+Q1. Create a new eclipse project day4_lab
+    Copy earlier created Point2D class in com.app.geometry package.
+    Create a new TestPoints class in "com.app.tester" package for the following.
+
+1.1 Prompt user , how many points to plot?
+    Create suitable array , to store Point2D type of references.
+
+1.2 Add a menu , Run the application till user chooses option 10 (exit)
+
+	1 Plot a new point
+	  I/P --index , x & y
+	  eg : If user supplies 5 50 100
+	  Create a Point2D with x, y of (50,100) & its reference should be stored at the 5th index position in array.
+
+	2 Display all points plotted so far. (Use for-each)
+
+	3. Calculate distance
+           I/P strt , end point indexes.
+           eg : If user enters 2 6
+           Find out the distance between 2nd & 6th point. (array indexes start from 0)
+
+	10. Exit
+
+Note : Boundary condition checking & null checking is expected.
+(Meaning : if user supplies index > array length -1 , then give error message : invalid index --out of range
+If no point is plotted at user specified index , then give error message : invalid index -- no point plotted here.)
+
+Q2. Create java application for the following.
+    Create Student class  in package com.cdac.core
+
+2.1 Every student must have   --- id(int) --if possible system generated(Hint : use static data member id counter : start with 1 n generate ids.), name (String), email(String), age(int),gpa
+
+2.2 Add suitable parameterized constructor.
+    Accept -- name,email,age only from user.
+
+2.3 Add a method fetchDetails to  fetch student details
+    (ret type -- String)
+
+2.4 Add computeGPA method in Student class
+    Accept 3 method arguments for : scores for quiz , test & assignments
+    gpa should be computed on 20 % of quiz score, 50% of test score & 30% of assignment score.
+    (1-10 scale)
+
+
+2.5 Write a TestStudent class in tester package
+    Prompt user for class size(how many students ?)
+    Create suitable array.
+
+-------	Menu --------
+
+1. Admit new Student
+   I/P student details (name,email,age)
+   If there is a space , accept n store student details.
+   Otherwise give error message : class capacity full!!!
+
+2. Assign scores (quiz , test assignment all out of 100)
+   I/P student's roll no & 3 scores  
+   O/P In case of success : scores added & GPA computed!
+   In case of failure : invalid student id.
+
+3. Display details of topper
+
+4. Exit

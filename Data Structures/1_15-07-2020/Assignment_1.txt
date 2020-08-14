@@ -1,0 +1,9 @@
+Day 1
+
+Q1. Implement the solution for the problem using Linked List approach.
+    In linked list, we will store a number, as we read from it (if it is not present in the list). 
+    Every number we read from stream, we search in linked list to find if it is duplicate or not.
+
+Q2. Once #1 is implemented, try out the shared code. Change the type of array from "int" to "bool".
+
+Q3. Try implementing the array as bit map, instead of array of "int" or "bool".

@@ -1,0 +1,5 @@
+ADS DAY 3 
+
+Assignment 1 : Implement search/find functionality in Hash Table implementation using Chaining.
+
+Assignment 2 : Implement search/find functionality in Hash Table implementation using Linear Probing.

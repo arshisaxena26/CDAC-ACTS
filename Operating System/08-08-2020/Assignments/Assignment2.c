@@ -11,45 +11,55 @@ For Compilation type : gcc -pthread Assignment7.c
 #include<errno.h>
 #include <semaphore.h>
 
-#define T_Num 2
-
-void *printTable(void *param);
-sem_t s1;
+void *Table2(void *param);
+void *Table3(void *param);
+sem_t s,s1;
 
 int main()
 {
-	int num_array[]={2,3};
+	pthread_t tid2;
+	pthread_t tid3;
 	
-	pthread_t tid[T_Num];
-	sem_init(&s1,0,1);
-		
-	int i;
-	for(i=0;i<T_Num;i++)
-	{	
-		pthread_create(&tid[i], NULL, printTable,&num_array[i]);
-//		sleep(1);
-		}
-
-	for(i=0;i<T_Num;i++)	
-		pthread_join(tid[i],NULL);
-
+	sem_init(&s,0,0);
+	sem_init(&s1,0,0);
+	
+	pthread_attr_t attr;
+	pthread_attr_init(&attr);
+	
+	pthread_create(&tid2, &attr, Table2, NULL);
+	pthread_create(&tid3, &attr, Table3, NULL);
+	
+	pthread_join(tid2,NULL);
+	pthread_join(tid3,NULL);
+	
+	sem_destroy(&s);
 	sem_destroy(&s1);
 }
 
-void *printTable(void *param)
+void *Table2(void *param)
 {
 	int i;
-	int *num=(int*)param;
-
-
 	for(i=1;i<=10;i++)
 	{
-		sem_wait(&s1);
-		printf("%d * %d = %d\n",*num,i,((*num)*i));
-		sem_post(&s1);
+		printf("2 * %d = %d\n",i,2*i);
 		}
-	
 	printf("\n");
+	
+	sem_post(&s);
+	
 	pthread_exit(0);
 	}
 
+void *Table3(void *param)
+{
+	int i;
+	sem_wait(&s);
+	for(i=1;i<=10;i++)
+	{
+		sem_post(&s1);
+		printf("3 * %d = %d\n",i,3*i);
+		}
+	printf("\n");	
+	
+	pthread_exit(0);
+	}

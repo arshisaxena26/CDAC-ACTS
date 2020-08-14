@@ -1,0 +1,9 @@
+ADS DAY 4
+
+Assignment 1
+Implement AdjList class to store undirected graph as adjacency list.
+
+Assignment 2
+Implement DirectedAdjMatrix class to store directed graph as adjacency matrix.
+
+Implement the two class and member functions (addEdge, print), refer to the code show in class today for AdjMatrix and DirectedAdjList classes.

@@ -48,9 +48,9 @@ public class CustomerTester {
 				case 3:
 					if (!noCustomers) {
 						System.out.println("Enter Email and Password");
-						int index = CustomerLoginAuthentication(validateEmail(sc.next()), validatePassword(sc.next()),
+						Customer c = CustomerLoginAuthentication(validateEmail(sc.next()), validatePassword(sc.next()),
 								cust);
-						System.out.println("Login Successful!\n" + cust[index]);
+						System.out.println("Login Successful!\n" + c);
 					} else
 						System.out.println("No Customers Found.Sign Up First! ");
 					break;
@@ -58,10 +58,10 @@ public class CustomerTester {
 				case 4:
 					if (!noCustomers) {
 						System.out.println("Enter Email, Old Password and New Password");
-						int index = CustomerLoginAuthentication(validateEmail(sc.next()), validatePassword(sc.next()),
+						Customer c = CustomerLoginAuthentication(validateEmail(sc.next()), validatePassword(sc.next()),
 								cust);
-						cust[index].setPassword(sc.next());
-						System.out.println("Password Changed for " + cust[index].getName());
+						c.setPassword(sc.next());
+						System.out.println("Password Changed for " + c.getName());
 
 					} else
 						System.out.println("No Customers Found.Sign Up First! ");

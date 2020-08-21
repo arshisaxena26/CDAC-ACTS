@@ -52,19 +52,13 @@ public class ValidationRules {
 		return regAmount;
 	}
 
-	public static int CustomerLoginAuthentication(String email, String pwd, Customer[] custs)
+	public static Customer CustomerLoginAuthentication(String email, String pwd, Customer[] custs)
 			throws CustomerHandlingException {
-		boolean flag = true;
-		int index = 0;
-		for (int i = 0; i < custs.length; i++) {
-			if (custs[i].getEmail().equals(email) && (custs[i].getPassword().equals(pwd))) {
-				flag = false;
-				index = i;
-			}
+		for (Customer c:custs) {
+			if(c!=null)
+				if (c.getEmail().equals(email) && (c.getPassword().equals(pwd)))
+					return c;
 		}
-		if (flag == true)
-			throw new CustomerHandlingException("Password Updation Failed");
-		else
-			return index;
+		throw new CustomerHandlingException("Invalid Email or Password");
 	}
 }

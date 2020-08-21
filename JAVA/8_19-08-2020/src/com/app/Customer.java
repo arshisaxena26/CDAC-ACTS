@@ -3,9 +3,9 @@ package com.app;
 import java.util.Date;
 
 public class Customer {
-	String name, email, password, custType;
-	Date date;
-	double regAmount;
+	private String name, email, password, custType;
+	private Date date;
+	private double regAmount;
 
 	public Customer(String name, String email, String pwd, String type, Date date, double amt) {
 		this.name = name;

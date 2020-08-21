@@ -63,7 +63,7 @@ public class ValidationRules {
 			}
 		}
 		if (flag == true)
-			throw new CustomerHandlingException("Password Updation Failed");
+			throw new CustomerHandlingException("Invalid Email or Password");
 		else
 			return index;
 	}

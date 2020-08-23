@@ -20,7 +20,7 @@ public class Employee1 {
 	public boolean equals(Object anObject) {
 		if (anObject instanceof Employee1) {
 			Employee1 emp = (Employee1) anObject;
-			if ((this.id == emp.id) && (this.deptID == emp.deptID))
+			if ((this.id == emp.id) && (this.deptID.equals(emp.deptID)))
 				return true;
 		}
 		return false;

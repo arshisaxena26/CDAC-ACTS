@@ -1,0 +1,42 @@
+Day 11
+
+Q1. Design a java application to store  car details for a particular car dealer, using ArrayList.
+(A car dealer may have a tie up with different car manufacturers (eg : Maruti , Honda ,Hyundai)
+
+Car attributes : registrationNo(string), price(double) ,color (string)manufatureDate (Date) & manufacturer
+Manufacturer attributes : companyName(string) , location(string)
+
+1.1 Accept car details from user (using Scanner)
+Ensure no duplicate details .
+Treat 2 cars as SAME , if & only if their regNo,manufatureDate & Manufacturer is the same.
+In case of duplicates , raise. custom exception
+
+1.2 Your application should display all car details .
+
+1.3 Display registration no & price of cars manufactured from a specific location.
+I/p : location
+
+1.4 Offer discount
+Apply discount for a specific manufacturer's company
+I/p company & discount in price (in %)
+
+1.5 Exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

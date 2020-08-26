@@ -10,10 +10,8 @@ import custom_exceptions.CarExceptions;
 public class CarValidations {
 
 	public static boolean validateCarEntriesDuplication(ArrayList<Car> car, Car newCar) throws CarExceptions {
-		for (Car c : car) {
-			if (c.equals(newCar)) // Calling Car Class' Overridden equals method
-				throw new CarExceptions("Duplicate Entries NOT Allowed");
-		}
+		if (car.contains(newCar)) // contains using Car's overridden equals method internally
+			throw new CarExceptions("Duplicate Entries NOT Allowed");
 		return true;
 	}
 

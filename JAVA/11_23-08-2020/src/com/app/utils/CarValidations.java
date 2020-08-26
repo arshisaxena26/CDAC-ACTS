@@ -11,9 +11,8 @@ public class CarValidations {
 
 	public static boolean validateCarEntriesDuplication(ArrayList<Car> car, Car newCar) throws CarExceptions {
 		for (Car c : car) {
-			if (c != null)
-				if (c.equals(newCar)) // Calling Car Class' Overridden equals method
-					throw new CarExceptions("Duplicate Entries NOT Allowed");
+			if (c.equals(newCar)) // Calling Car Class' Overridden equals method
+				throw new CarExceptions("Duplicate Entries NOT Allowed");
 		}
 		return true;
 	}
@@ -29,10 +28,9 @@ public class CarValidations {
 
 	// Checking if the specified location exists with any object in ArrayList
 	public static boolean validateLocation(String location, ArrayList<Car> car) throws CarExceptions {
-		for (Car c : car) {
-			if (c != null)
-				if (c.getLocation().equals(location))
-					return true;
+		for (Car c : car)
+			if (c.getLocation().equals(location))
+				return true;
 		}
 		throw new CarExceptions("No Cars at " + location + " location");
 	}

@@ -49,8 +49,7 @@ public class TestCar {
 				case 2:
 					if (carsEntered == true) {
 						for (Car c : car)
-							if (c != null)
-								System.out.println("-----Car Details------" + c);
+							System.out.println("-----Car Details------" + c);
 					} else
 						System.out.println("Enter Car Details First");
 					break;
@@ -61,10 +60,9 @@ public class TestCar {
 						String location = sc.next();
 
 						for (Car c : car) {
-							if (c != null)
-								if (validateLocation(location, car)) // method present in CarVAlidation Class
-									System.out.println("Registration Number:" + c.getRegistrationNo() + "\n Price:"
-											+ c.getPrice());
+							if (validateLocation(location, car)) // method present in CarVAlidation Class
+								System.out.println("Registration Number:" + c.getRegistrationNo() + "\n Price:"
+										+ c.getPrice());
 						}
 					} else
 						System.out.println("Enter Car Details First");
@@ -78,10 +76,8 @@ public class TestCar {
 						double discount = sc.nextDouble();
 
 						for (Car c : car) {
-							if (c != null)
-								if (c.getCompanyName().equals(name))
-									c.setPrice(c.getPrice() - (discount / 100 * c.getPrice())); // Adding discounts
-
+							if (c.getCompanyName().equals(name))
+								c.setPrice(c.getPrice() - (discount / 100 * c.getPrice())); // Adding discounts
 							System.out.println("----Car Details after Discount----" + c);
 						}
 

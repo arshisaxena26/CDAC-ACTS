@@ -17,8 +17,8 @@ public class Car {
 		this.price = price;
 	}
 
-	// Inner Class
-	public class Manufacture {
+	// Inner Class--Tight Coupling
+	private class Manufacture {
 		private String location;
 		private ManufacturerName companyName;
 

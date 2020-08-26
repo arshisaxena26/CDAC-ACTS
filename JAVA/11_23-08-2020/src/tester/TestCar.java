@@ -17,7 +17,6 @@ public class TestCar {
 			// Creating an ArrayList of objects of Car
 			ArrayList<Car> car = new ArrayList<>();
 
-			int counter = 0;
 			boolean exit = false;
 			boolean carsEntered = false;
 
@@ -41,7 +40,7 @@ public class TestCar {
 																						// method
 
 					if (validateCarEntriesDuplication(car, newCar)) { // method present in CarValidations class
-						car.add(counter++, newCar); // Adding Car's object to ArrayList if entries unique
+						car.add(newCar); // Adding Car's object to ArrayList if entries unique
 						System.out.println("Car Entry Added!");
 					}
 

@@ -1,8 +1,6 @@
 package com.app.utils;
 
 import java.util.ArrayList;
-import java.util.Date;
-
 import com.app.core.Car;
 import com.app.core.ManufacturerName;
 
@@ -10,15 +8,31 @@ import custom_exceptions.CarExceptions;
 
 public class CarValidations {
 
-	public static boolean validateCarEntriesDuplication(String regNo, Date date, ManufacturerName manufacturer,
-			ArrayList<Car.Manufacture> man) throws CarExceptions {
-		for (Car.Manufacture c : man) {
+	public static boolean validateCarEntriesDuplication(ArrayList<Car> car, Car newCar) throws CarExceptions {
+		for (Car c : car) {
 			if (c != null)
-				if (c.getRegistrationNo().equals(regNo) && c.getManufactureDate().equals(date)
-						&& c.getCompanyName().equals(manufacturer))
+				if (c.equals(newCar)) // Calling Car Class' Overridden equals method
 					throw new CarExceptions("Duplicate Entries NOT Allowed");
 		}
 		return true;
 	}
 
+	public static ManufacturerName validateManufacturerName(String name) throws CarExceptions {
+		try { // Checking for Valid Manufacturer Name in Enum
+			ManufacturerName.valueOf(name.toUpperCase());
+		} catch (Exception e) {
+			throw new CarExceptions("Invalid Manufacturer");
+		}
+		return ManufacturerName.valueOf(name.toUpperCase());
+	}
+
+	// Checking if the specified location exists with any object in ArrayList
+	public static boolean validateLocation(String location, ArrayList<Car> car) throws CarExceptions {
+		for (Car c : car) {
+			if (c != null)
+				if (c.getLocation().equals(location))
+					return true;
+		}
+		throw new CarExceptions("No Cars at " + location + " location");
+	}
 }

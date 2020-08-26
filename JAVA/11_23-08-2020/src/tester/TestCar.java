@@ -2,7 +2,6 @@ package tester;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 import com.app.core.Car;
 import com.app.core.ManufacturerName;
@@ -14,14 +13,16 @@ public class TestCar {
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-			ArrayList<Car.Manufacture> car = new ArrayList<>();
+
+			// Creating an ArrayList of objects of Car
+			ArrayList<Car> car = new ArrayList<>();
 
 			int counter = 0;
 			boolean exit = false;
 			boolean carsEntered = false;
 
 			while (!exit) {
-				System.out.println("----OPTIONS-----");
+				System.out.println("\n----OPTIONS-----");
 				System.out.println("1. Enter Car Details");
 				System.out.println("2. Display ALL Car Details");
 				System.out.println("3. Cars Manufactured from a Specific Location");
@@ -32,40 +33,40 @@ public class TestCar {
 				case 1:
 					carsEntered = true;
 
-					System.out.println(
-							"Enter Car's Registration Number,Manufacture Date(dd-MM-yyyy),Manufacture's Name(Maruti,Honda,Hyundai),Color,Price and Location");
-					String regNo = sc.next();
-					Date date = sdf.parse(sc.next());
-					ManufacturerName company = ManufacturerName.valueOf(sc.next().toUpperCase());
+					System.out.println("Enter Car's Registration Number,Manufacture Date(dd-MM-yyyy),Color and Price");
+					Car newCar = new Car(sc.next(), sdf.parse(sc.next()), sc.next(), sc.nextDouble());
 
-					if (validateCarEntriesDuplication(regNo, date, company, car)) {
-						car.add(counter++,
-								new Car(regNo, date, sc.next(), sc.nextDouble()).new Manufacture(company, sc.next()));
+					System.out.println("Enter Manufacture's Name(Maruti,Honda,Hyundai) and Location");
+					newCar.linkVendor(validateManufacturerName(sc.next()), sc.next()); // Calling Car's linkVendor
+																						// method
+
+					if (validateCarEntriesDuplication(car, newCar)) { // method present in CarValidations class
+						car.add(counter++, newCar); // Adding Car's object to ArrayList if entries unique
 						System.out.println("Car Entry Added!");
-
 					}
+
 					break;
 
 				case 2:
 					if (carsEntered == true) {
-						for (Car.Manufacture c : car)
+						for (Car c : car)
 							if (c != null)
-								System.out.println("-----Car Details------\n" + c);
+								System.out.println("-----Car Details------" + c);
 					} else
 						System.out.println("Enter Car Details First");
 					break;
+
 				case 3:
 					if (carsEntered == true) {
 						System.out.println("Enter Location Name");
 						String location = sc.next();
 
-						for (Car.Manufacture c : car) {
+						for (Car c : car) {
 							if (c != null)
-								if (c.getLocation().equals(location))
+								if (validateLocation(location, car)) // method present in CarVAlidation Class
 									System.out.println("Registration Number:" + c.getRegistrationNo() + "\n Price:"
-											+ c.getPrice() + "\n");
+											+ c.getPrice());
 						}
-
 					} else
 						System.out.println("Enter Car Details First");
 					break;
@@ -73,20 +74,22 @@ public class TestCar {
 				case 4:
 					if (carsEntered == true) {
 						System.out.println("Enter Manufacturer Name and Discount(%)");
-						String name = sc.next();
+						ManufacturerName name = validateManufacturerName(sc.next()); // method present in CarVAlidation
+																						// Class
 						double discount = sc.nextDouble();
 
-						for (Car.Manufacture c : car) {
+						for (Car c : car) {
 							if (c != null)
 								if (c.getCompanyName().equals(name))
-									c.setPrice(c.getPrice() - (discount / 100 * c.getPrice()));
+									c.setPrice(c.getPrice() - (discount / 100 * c.getPrice())); // Adding discounts
 
-							System.out.println("----Car Details after Discount----\n" + c);
+							System.out.println("----Car Details after Discount----" + c);
 						}
 
 					} else
 						System.out.println("Enter Car Details First");
 					break;
+
 				case 5:
 					System.out.println("GOODBYE!");
 					exit = true;

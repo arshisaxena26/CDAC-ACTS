@@ -58,7 +58,12 @@ public class ValidationRules {
 		throw new CustomerHandlingException("Invalid Email or Password");
 	}
 
-	public static CustomerType validateCustomerType(String custType) {
+	public static CustomerType validateCustomerType(String custType) throws CustomerHandlingException {
+		try {
+			valueOf(custType);
+		} catch (IllegalArgumentException e) {
+			throw new CustomerHandlingException("Invalid Customer Type");
+		}
 		return valueOf(custType);
 	}
 

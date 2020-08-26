@@ -3,6 +3,7 @@ package com.app.utils;
 import java.util.ArrayList;
 import com.app.core.Car;
 import com.app.core.ManufacturerName;
+import static com.app.core.ManufacturerName.*;
 
 import custom_exceptions.CarExceptions;
 
@@ -19,11 +20,11 @@ public class CarValidations {
 
 	public static ManufacturerName validateManufacturerName(String name) throws CarExceptions {
 		try { // Checking for Valid Manufacturer Name in Enum
-			ManufacturerName.valueOf(name.toUpperCase());
-		} catch (Exception e) {
+			valueOf(name.toUpperCase());
+		} catch (IllegalArgumentException e) {
 			throw new CarExceptions("Invalid Manufacturer");
 		}
-		return ManufacturerName.valueOf(name.toUpperCase());
+		return valueOf(name.toUpperCase());
 	}
 
 	// Checking if the specified location exists with any object in ArrayList

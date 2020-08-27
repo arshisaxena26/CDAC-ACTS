@@ -1,0 +1,50 @@
+Day 12
+
+Q1. Test CRUD  functionality in Customer scenarion
+1.1 Copy from day9/day10 assignment : core classes , custom exception & validation rules
+Replace java.util.Date by java.time.LocalDate.
+Edit DoB validation rule : customer's birth date must be after 1st Jan 1950.
+
+1.2 Add a method in CollectionUtils class to generate sample data with Customers n shipping address.
+
+1.3 Create a Java Application for CustomerManagement System
+
+1. Customer registration
+Accept all i/ps
+It should't add  duplicate customers with the same email.
+
+2. Customer Login
+i/p : email n password
+o/p custom exception in case of invalid login or customer details , with login successful message.
+
+3. Offer discount on reg amount for senior citizens (age > 55)
+I/P : discount %
+Any customer whose age is > 55 , reduce reg amount by the % offered.
+(NOTE : Age computation should be based upon current date , no hardcoding please!)
+API Hint : java.time.Period class 's between method.
+
+4.Un subscribe Customer
+I/p : email
+(Remove customer record from the arraylist if it exists & give suitable message)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

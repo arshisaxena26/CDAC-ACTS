@@ -1,0 +1,30 @@
+Day 13
+
+Q1. Continue with Day 12 assignment. 
+Add following options (in eclipse project day13.1_lab)
+1.1 Sort the customers as per email using natural ordering
+1.2 Sort the customers as per DoB n customer type , using custom ordering
+
+Q2. Create a new eclipse project day13.2_lab. Copy core classes , custom excs n utils
+Store customer details in a HashSet .(all details )
+Remove a customer details . i/p : email
+Check if a customer exits : i/p email
+Display all customer details .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

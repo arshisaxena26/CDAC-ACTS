@@ -1,0 +1,48 @@
+Day 15
+
+Q1. Write a generic methods in GenericUtils class n test it using Tester.
+
+1.1 Write a generic method display to display contents of ANY Collection (Using for-each)
+(Hint : You should be able to pass eg : ArrayList<Customer> or HashSet<Integer> , LinkedList<String>.....)
+
+1.2 Write a generic method to return square root of sum of numbers passed in any Collection.
+eg : You should be able to pass AL<Double> or LinkedHashSet<Integer> or Vector<Float>
+
+1.3 Write a generic method  to remove alternate elements  of ANY Collection (any Set or any List can be passed to your method)
+(Hint : You should be able to pass eg : ArrayList<Customer> or HashSet<Integer> , LinkedList<String>.....)
+
+
+
+Q2. Solve Customer Management system using suitable Map.
+2.1 New Customer registration
+Ensure no data loss for duplicate customer.
+
+2.2 Display all customer details 
+API : values
+
+2.3 Assign Shipping Address
+I/p : email n shipping address details
+API : get
+
+2.4 Un subscribe customer
+API : remove
+
+2.5 Display Phone numbers of all senior citizens (age > 55)
+No Hint...Give it a try!
+
+2.6 Sort Customers as per Email
+Hint : TreeMap
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

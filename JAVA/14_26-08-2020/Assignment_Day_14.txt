@@ -1,0 +1,24 @@
+Day 14
+
+Q1. Continuation from Day 13.
+1.1 Add a method in CollectionUtils to create populated list of customers.(add customers with duplicate email ids)
+
+1.2 Create Java application for the following options
+1. Convert ArrayList to HashSet n confirm no dups & hashing algorithm (based upon hashCode n equals). Display it.
+2. Display Customer details sorted as per email , using a TreeSet (Natural ordering)
+3. Display Customer details sorted as per DoB n registration amount , using anonymous inner class.
+(add customer details with same DoB n same reg amount to observe n conclude)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

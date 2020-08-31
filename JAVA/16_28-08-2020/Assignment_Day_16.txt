@@ -1,0 +1,35 @@
+Day 16
+ 
+Create Customer management application for the following
+Add a data member in Customer : subscriptionPaidDate : LocalDate (to represent last subscription paid date)
+
+2.1 Populate minimum 4 customer details in a suitable HashMap
+Assign different subscriptionPaidDate to different customers (Using LocalDate.of method)
+Options 
+
+1.Customer Login
+email n password
+
+2. Pay Subscription amount
+email n subscription amount
+(update subscription amount n subscription date)
+
+3. Store names & phone numbers of senior citizens subscribed for GOLD plan , in a text file ,in buffered manner.
+
+4. Add a late fee to all the customers who have not paid a subscription in time.
+late fee = 2 % of sub amount.
+(update sub amount by a late fee)
+Last  paid date must be in a current month. (It's a monthly subscription)
+
+5. Store customer details sorted as per sub amount in text file in a buffered manner.
+
+
+
+
+
+
+
+
+
+
+

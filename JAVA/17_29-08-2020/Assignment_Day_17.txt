@@ -1,0 +1,26 @@
+Day 17
+
+Q1.Continuation from Day 16 assignment. Copy core classes , custom exceptions etc.
+
+Business requirement :
+1.1 When you launch your application , it should restore customer details from a binary file using de serialization.(just once at the start up)
+What will you for the 1st time when there is no .ser file ?
+Start with empty map. Next time onwards , you should be able to restore it from bin file.
+
+1.2 Remove option 5 (no text files needed)
+Add 1 more option to un subscribe a customer 
+I/P email
+
+1.3 In Exit option , save all customer details in a binary file using serialization (just once at the end)
+
+NOTE : Must use  a separate class IOUtils for data storing n restoring purpose.
+
+
+
+
+
+
+
+
+
+

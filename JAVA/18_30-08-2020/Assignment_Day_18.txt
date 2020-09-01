@@ -1,0 +1,38 @@
+Day 18
+
+Q1. Create multi threaded java application --- having 3 threads
+main , even , odd.
+
+Create EvenPrinterThread  & OddPrinterThread classes.
+Accept from user (in main thread)-- start & end values.
+Pass these values from main to child threads
+Even no printer thread  should print even nos within range, with small delay (sleep)
+Odd no printer thread should print odd nos within range , with small delay (sleep)
+Ensure no orphans.
+
+Q2 Solve above using extends Thread first & then implements Runnable scenario.
+
+Q3. Extra optional assignment(application of threads with collection n I/O)
+(refer to day16.3 : eclipse project pls.)
+Copy only core classes --Student , Subject n Address.
+Copy StudentCollctionUtils class  
+
+3.1 Refer to  method in 
+public static Map<String,Student> populateMap(List<Student> students)
+{
+  //already exists!
+}
+
+3.2 Create a multi threaded application for saving student details in 2 text files(taken from the Map) : (in student_gpa.txt : sorted by gpa & in student_dob.txt : sorted by dob) using 2 different threads , concurrently!
+For sorting must use custom ordering + anonymous inner class.
+
+
+
+
+
+
+
+
+
+
+

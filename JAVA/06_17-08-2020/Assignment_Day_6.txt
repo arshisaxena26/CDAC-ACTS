@@ -1,0 +1,14 @@
+Q1--Extension of Assignment5
+1.1 Apply abstraction in emp based organization
+Hint : abstract method : computeNetSalary in Emp class.
+
+
+1.2 In TestOrganization  class , modify option 3
+
+case 3. 
+ Display information of all employees,  including net salary , display bonus if it's manager or display hourly rate of a worker , using single for-each loop.
+
+
+
+
+

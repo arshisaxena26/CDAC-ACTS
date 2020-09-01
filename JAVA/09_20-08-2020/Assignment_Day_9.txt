@@ -1,0 +1,46 @@
+Day 9
+1. Complete Day 8 assignment , with proper separation , layers(classes) as discussed.
+New validation rule : password must be min 8 chars long.
+(Must add all validation rules!)
+
+Continue with yesterday's assignment.
+Options 1 & 2 : same
+Add More options
+
+3. Customer Login
+I/P : email & password
+In case of success , Display "Login Successful message" + Customer details
+In case of failure : raise custom exception . Error mesg : Invalid email or Password.
+
+4. Change Password
+I/P : email , old password , new password
+In case of success , Display "Password changed for " customer name.
+In case of failure : raise custom exception . Error mesg : "Password updation failed " : Invalid email or Password.
+
+10 .Exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@ CREATE database car_hire;
 USE car_hire;
 
 
-CREATE TABLE IF NOT EXISTS Customer
+CREATE TABLE IF NOT EXISTS customer
 (
 	customer_id TINYINT(10) UNSIGNED NOT NULL,
 	customer_name VARCHAR(30),
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS Customer
 	PRIMARY KEY (customer_id)
 );
 
-CREATE TABLE IF NOT EXISTS Booking
+CREATE TABLE IF NOT EXISTS booking
 (
 	booking_id TINYINT(10) UNSIGNED NOT NULL,
 	date_from DATE,
@@ -30,14 +30,14 @@ CREATE TABLE IF NOT EXISTS Booking
 	PRIMARY KEY (booking_id)
 );
 
-CREATE TABLE IF NOT EXISTS BookingStatus
+CREATE TABLE IF NOT EXISTS booking_status
 (
 	booking_status_code VARCHAR(10) NOT NULL,
 	booking_status_description VARCHAR(30),
 	PRIMARY KEY (booking_status_code)
 );
 
-CREATE TABLE IF NOT EXISTS Vehicle
+CREATE TABLE IF NOT EXISTS vehicle
 (
 	reg_number TINYINT(15) UNSIGNED NOT NULL,
 	current_mileage DECIMAL(4,2),
@@ -47,14 +47,14 @@ CREATE TABLE IF NOT EXISTS Vehicle
 	PRIMARY KEY (reg_number)
 );
 
-CREATE TABLE IF NOT EXISTS VehicleCategory
+CREATE TABLE IF NOT EXISTS vehicle_category
 (
 	vehicle_category_code VARCHAR(10) NOT NULL,
 	vehicle_category_description VARCHAR(30),
 	PRIMARY KEY (vehicle_category_code)
 );
 
-CREATE TABLE IF NOT EXISTS Model
+CREATE TABLE IF NOT EXISTS model
 (
 	model_code VARCHAR(10) NOT NULL,
 	daily_hire_rate DECIMAL(4,2),
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS Model
 	PRIMARY KEY (model_code)
 );
 
-CREATE TABLE IF NOT EXISTS Manufacturer
+CREATE TABLE IF NOT EXISTS manufacturer
 (
 	manufacturer_code VARCHAR(10) NOT NULL,
 	manufacturer_name VARCHAR(30),

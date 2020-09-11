@@ -1,16 +1,22 @@
-CREATE database car_hire;
+-- Data Model for Car Hire Business (Data_Model.png) --
 
-USE car_hire;
+-- Prepare CREATE TABLE STATEMENT based on your understanding of data types and width of mentioned entities.
+
+-- Note: Please do not enforce any constraints as of now.
+
+CREATE database car_hire_business;
+
+USE car_hire_business;
 
 
 CREATE TABLE IF NOT EXISTS customer
 (
-	customer_id TINYINT(10) UNSIGNED NOT NULL,
+	customer_id INT UNSIGNED NOT NULL,
 	customer_name VARCHAR(30),
 	customer_details VARCHAR(50),
 	gender CHAR(1),
 	email_address VARCHAR(15),
-	phone_number TINYINT(10) UNSIGNED,
+	phone_number INT UNSIGNED,
 	address_line_1 VARCHAR(15),
 	address_line_2 VARCHAR(15),
 	address_line_3 VARCHAR(15),
@@ -22,7 +28,7 @@ CREATE TABLE IF NOT EXISTS customer
 
 CREATE TABLE IF NOT EXISTS booking
 (
-	booking_id TINYINT(10) UNSIGNED NOT NULL,
+	booking_id INT UNSIGNED NOT NULL,
 	date_from DATE,
 	date_to DATE,
 	confirmation_letter_sent_yn CHAR(1),
@@ -39,7 +45,7 @@ CREATE TABLE IF NOT EXISTS booking_status
 
 CREATE TABLE IF NOT EXISTS vehicle
 (
-	reg_number TINYINT(15) UNSIGNED NOT NULL,
+	reg_number INT UNSIGNED NOT NULL,
 	current_mileage DECIMAL(4,2),
 	daily_hire_rate DECIMAL(4,2),
 	date_mot_due DATE,

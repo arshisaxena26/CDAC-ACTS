@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS prescribes
 	physician INT UNSIGNED,
 	patient INT UNSIGNED,
 	medication INT UNSIGNED,
-	`date` TIMESTAMP, -- CHECK(`date` <= current_timestamp),
+	`date` TIMESTAMP CHECK(`date` <= sysdate()),
 	appointment INT UNSIGNED,
 	dose VARCHAR(20),
 	PRIMARY KEY(physician,patient,medication,`date`),

@@ -1,0 +1,9 @@
+1.Design resume.html web page to show  your academic, personal, projects, skillset information with the help of HTML elements . Explore HTML elements and visual elements
+like fonts, color, fontsize, background color, lists, paragraphs,etc  while designing
+resume pages.
+    Use proper  nested Tables to organize  your resume information.
+
+2.Build interactive login.html, register.html , contact.html, along with index.html page.
+3.User form elements to accept input from end user in respective html page
+4.Use Different types of input controls such as radio button, list box, dropdown listbox,
+  buttons, etc HTML controls while designing register.html web page

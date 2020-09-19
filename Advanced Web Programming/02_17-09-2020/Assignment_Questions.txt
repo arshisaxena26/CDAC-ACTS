@@ -1,0 +1,22 @@
+Assignment:
+
+1.Install wmap server on your machine
+2.Ensure wamp apache server is running on your computer using services.msc tool
+3.Create onlineshopping folder in C:\wamp64/www folder as physical directory 
+	  for Onlineshopping Web site in wamp server.
+
+4.Use Visual code to create Onlineshopping folder as developer enviornment for building Website resources such as images, stylesheets, html files and json files.
+5.Add index.html, catalog.html, details.html,login.html, register.html, changepassword.html, cart.html aboutus.html, contactus.html
+html files to onlinshopping folder.
+6.Add sytle.css to store cascaded style sheets for future use.
+7.Add app.js file to add  data input validation logic, DOM maninpulation for future use.
+
+8.Design interactive  catalog.html page to show number of products with their images and title using List,image,paragraph html elements.
+9.Design login.html, register.html with HTML Form element to accept user inputs (textbox, button, lable).
+10.Explore Table HTML element to organize form elements with proper indentation. redesign login.html, register.html using HTML elements using proper radio button, listbox, checkbox, text boxes.
+11.Add simple background color, text color , fonts for lables in consistent manner using style.css file.
+12.Link all HTML pages with proper user interface with the help of achor HTML elments in index.html file.
+13.Link external CSS and javascript file with html pages using Head in HTML document.
+
+14.Deploy Onlineshopping folder created using Visual code to WAMP server
+15.Test Website  proper execution by acceesing url from Chrome browser using http://localhost/onlinshopping.html

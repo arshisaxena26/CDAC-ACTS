@@ -72,20 +72,19 @@
 	    
 	    	RETURN (incentive);
 	END#
-	DELIMITER ;
-
-	ALTER TABLE employees ADD (incentives DECIMAL);
 	
 	DELIMITER #
 	CREATE PROCEDURE addIncentives()
 	BEGIN
 	    	DECLARE empno INTEGER;
 		DECLARE incentive_value DECIMAL;
-	   	 DECLARE emp_notfound BOOLEAN DEFAULT false;
+	   	DECLARE emp_notfound BOOLEAN DEFAULT false;
 	    
 	    	DECLARE c_empRec CURSOR FOR SELECT employee_id FROM employees;
 	    	DECLARE continue HANDLER FOR NOT FOUND SET emp_notfound=true;
-	    
+
+	    	ALTER TABLE employees ADD (incentives DECIMAL);
+
 	    	OPEN c_empRec;
 	    
 	    	cur_loop : LOOP
@@ -102,8 +101,6 @@
 		  
 		CLOSE c_empRec;
 	END#
-
-	call addIncentives();
 	
 --4. Write a program to get the count of employees working in provided deptno.
 

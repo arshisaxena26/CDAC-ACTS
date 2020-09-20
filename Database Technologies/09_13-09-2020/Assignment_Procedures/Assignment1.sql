@@ -18,8 +18,6 @@
 --2. Prepare a program to delete the data from emp. It will receive two inputs employee number and employee name. If employee number is passed --as null then delete the data based on employee name.
 --Backup the deleted data to employee_backup table.
 
-	CREATE TABLE employee_backup LIKE employees;
-
 	DELIMITER #
 	CREATE PROCEDURE deleteEmpData
 	(
@@ -27,17 +25,21 @@
 	    	p_empname VARCHAR(30)
 	)
 	BEGIN
-		IF empno IS NULL THEN
+		CREATE TABLE IF NOT EXISTS employee_backup LIKE employees;
+		
+		IF p_empno IS NULL THEN
 			INSERT INTO employee_backup 
 			SELECT * FROM employees WHERE first_name = p_empname;
 
 			DELETE FROM employees WHERE first_name = p_empname;
-	    	ELSE
+	    	
+		ELSE
 			INSERT INTO employee_backup 
 			SELECT * FROM employees WHERE employee_id = p_empno;
 
 			DELETE FROM employees WHERE employee_id = p_empno;
-	   	END IF;    
+	   	
+		END IF;    
 	END#
 
 	
@@ -89,16 +91,7 @@
 	    DEALLOCATE PREPARE statement; 
 	END#
 
---5. Prepare a program to list those employee who are earning less then avg of their deparment. This program may take input as (p_salary_fix BOOLEAN). If the input is given as true then these employees salary must be set to AVG Salary + 100$.
-
-
-	CREATE OR REPLACE VIEW updatedSalary_view
-	AS 
-	SELECT first_name, salary, avg_sal
-	FROM employees e JOIN (SELECT department_id,avg(salary) avg_sal FROM employees GROUP BY department_id) AS temp
-	ON e.department_id = temp.department_id
-	WHERE e.salary < avg_sal;
-	
+--5. Prepare a program to list those employee who are earning less than avg of their deparment. This program may take input as (p_salary_fix BOOLEAN). If the input is given as true then these employees salary must be set to AVG Salary + 100$.
 	
 	DELIMITER #
 	CREATE PROCEDURE setSalary
@@ -112,6 +105,13 @@
 	 
 		DECLARE c_emp CURSOR FOR SELECT * FROM updatedSalary_view;
 	    	DECLARE continue HANDLER FOR NOT FOUND SET v_notfound=true;
+
+		CREATE OR REPLACE VIEW updatedSalary_view
+		AS 
+		SELECT first_name, salary, avg_sal
+		FROM employees e JOIN (SELECT department_id,avg(salary) avg_sal FROM employees GROUP BY department_id) AS temp
+		ON e.department_id = temp.department_id
+		WHERE e.salary < avg_sal;
 	    
 	    	IF p_salary_fix THEN
 			OPEN c_emp;

@@ -7,40 +7,40 @@ Load employees collection from 'employees.json' file.
 	> db.employees.find().limit(1);
     
     2. Display employees with manager id 100
-        > db.employees.find( {manager_id: 100} );
+        > db.employees.find({manager_id: 100});
     
     3. Display following fields for all employees:  employee_id, hire_date, job_id and country_id. Exclude _id.
-        > db.employees.find( {}, {employee_id: 1, hire_date: 1, "job.job_id": 1, "department.location.country_id": 1, _id: 0} );
+        > db.employees.find({}, {employee_id: 1, hire_date: 1, "job.job_id": 1, "department.location.country_id": 1, _id: 0});
 
     4. Display all information about employees excluding: _id, job, hire_date
-        > db.employees.find( {}, {_id: 0, hire_date: 0, job: 0} );
+        > db.employees.find({}, {_id: 0, hire_date: 0, job: 0});
 
     5. Find employee with no manager
-        > db.employees.find( {manager_id : null} );
+        > db.employees.find({manager_id: null});
 
     6. Find employees who were hired on date 18-05-1995
-        > db.employees.find( {hire_date : new Date("1995-05-18")} );
+        > db.employees.find({hire_date: new Date("1995-05-18")});
 
     7. Find all employees who were hired in year 1995. Sort result by hire_date in ascending order.
-        > db.employees.find( {hire_date : {$gte : new Date("1995-01-01"), $lte : new Date("1995-12-31") } } ).sort( {hire_date : 1} );
+        > db.employees.find({hire_date: {$gte: new Date("1995-01-01"), $lte: new Date("1995-12-31") } }).sort({hire_date: 1});
 
     8. Display employees with salary more than 12000 and working in Sales departments. Sort results by salary in descending order.
-        > db.employees.find( {$and : [ {salary: {$gt : 12000}}, {"department.department_name" : "Sales"} ]} ).sort( {salary: -1} );
+        > db.employees.find({$and: [ {salary: {$gt: 12000} }, {"department.department_name": "Sales"} ] }).sort({salary: -1});
 
     9. List all department names from employees collection.
         > db.employees.distinct("department.department_name");
 
     10. List departments (department_name only) having employees earning more than 12000.
-        > db.employees.find( {salary: {$gt: 12000} },{"department.department_name": 1, _id: 0} );
+        > db.employees.find({salary: {$gt: 12000} }, {"department.department_name": 1, _id: 0});
 
     11. List all employees working in departments with id 40, 70 and 90. (use $in)
-        > db.employees.find( {"department.department_id": {$in : [40,70,90]} } );
+        > db.employees.find({"department.department_id": {$in: [40,70,90] } }) ;
 
     12. List all employees working in deparment 40 or with salary higher than 20000.
-        > db.employees.find( {$or : [ {"department.department_id": 40}, {salary : {$gt : 20000}} ] } );
+        > db.employees.find({$or: [ {"department.department_id": 40}, {salary: {$gt: 20000} } ] } );
 
     13. Find employees whose last name starts with letter K and ends with letter g.
-        > db.employees.find( {last_name : /^k.*g$/i} );
+        > db.employees.find({last_name: /^k.*g$/i});
 
     14. List employees with salary greater than 5000 and working in department 40 or having last_name as "King".
         > db.employees.find( {$and : [ {salary : {$gt : 5000}}, {$or: [ {"department.department_id": 40}, {last_name : "King"}] }] });

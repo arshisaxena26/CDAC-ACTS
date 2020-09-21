@@ -1,0 +1,49 @@
+Topic: Insert/Update/Delete
+
+Create a new collection emp_1. Use this collection for following questions.
+
+1. Insert a document with following fields:
+   employee_id:100, last_name:King, salary:30000
+
+	> db.emp_1.insert({employee_id: 100, last_name: "King", salary: 30000});
+
+2.  Insert following documents:
+    employee_id:101, last_name:Stark, salary:20000, department_id:1
+    employee_id:102, last_name:Rogers, salary:25000, department_id:1
+    employee_id:103, last_name:Lee, salary:10000
+	
+	> db.emp_1.insertMany([ 
+		{employee_id:101, last_name:"Stark", salary:20000, department_id:1}, 
+		{employee_id:102, last_name:"Rogers", salary:25000, department_id:1}, 
+		{employee_id:103, last_name:"Lee", salary:10000} ]);
+
+3. For an employee with id 101, add a new field as - job_id: PROG
+	> db.emp_1.update({employee_id: 101}, {$set: {job_id: "PROG"}});
+
+4. Add a new field to all documents as - country_id : US
+	>db.emp_1.update({}, {$set: {country_id: "US"}}, {multi: true});
+
+5. Some employees are not mapped with any department. Set 0 as department_id for all such employees.
+	>db.emp_1.update({department_id: {$exists: false}}, {$set: {department_id: 0}}, {multi: true});
+
+6. Salaries of employees in department 1 were incremented by 20%. Update collection accordingly.
+	>db.emp_1.update({department_id: 1}, {$mul: {salary: 1.2}}, {multi: true});
+
+7. Refer to Q3. Remove field job_id from the document.
+	>db.emp_1.update({}, {$unset: {job_id: 1}});
+
+8. Update field salary to 20000 for an employee with id 110. (Use upsert)
+	>db.emp_1.update({employee_id: 110},{$set: {salary: 20000}}, {upsert: true});
+
+9. Rename field 'employee_id' to 'eid' across all docuemnts.
+	>db.emp_1.update({},{$rename: {"employee_id": "eid"}}, {multi: true});
+
+10. Delete employee records working in department with id 0.
+	>db.emp_1.remove({department_id: 0});
+
+11. Rename collection 'emp_1' as 'emp'.
+	>db.emp_1.renameCollection("emp");
+
+12. Drop collection 'emp'.
+	>db.emp.drop();
+

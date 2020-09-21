@@ -31,7 +31,7 @@ Load employees collection from 'employees.json' file.
         > db.employees.distinct("department.department_name");
 
     10. List departments (department_name only) having employees earning more than 12000.
-        > db.employees.find({salary: {$gt: 12000} }, {"department.department_name": 1, _id: 0});
+        > db.employees.distinct("department.department_name", {salary : {$gt : 12000}});
 
     11. List all employees working in departments with id 40, 70 and 90. (use $in)
         > db.employees.find({"department.department_id": {$in: [40,70,90] } }) ;

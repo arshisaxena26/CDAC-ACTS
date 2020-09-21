@@ -1,0 +1,32 @@
+DBT Official INTERNAL Assignment 2
+Date of Assignment : 20th Sept 2020
+Date of Submission : 22nd Sept 2020 : 05:00 PM
+
+
+Q1. Create database hr. Load employees collection from 'employees.json' file using mongoimport. Refer file 'LoadCollection.txt'.
+    > mongoimport --db hr --collection employees path/employees.json
+
+1. Display employees who joined after 1990 in descending order of hire date.(2 Marks)
+   > db.employees.find({hire_date : {$gt : new Date("1990-12-31")} }).sort({hire_date : -1}).pretty();
+
+2. Display employee id, department id and salary of employees working in departments with id 10,30 and 60.(2 Marks)
+   > db.employees.find({"department.department_id": {$in: [10,30,60] }}, {employee_id: 1, "department.department_id": 1, salary: 1, _id: 0});
+
+3. Display employees who are not earning any commission or have salary higher than 12000. Display output in ascending order of department id and descending order of salary. (2 Marks)
+   > db.employees.find({$or : [{commission_pct:"NaN"},{salary: {$gt: 12000}}]}).sort({"department.department_id":1, salary: -1}).pretty();
+
+4. UK head of the company want a list of all job titles. Get a list of job titles of employees who are working in UK. (2 Marks)
+   > db.employees.distinct("job.job_title", {"department.location.country_id":"UK"});
+
+5. For all employees who are not earning commission, increment salary by 1000. (2 Marks)
+   > db.employees.update({commission: "NaN"},{$inc: {salary: 1000}}, {multi: true});
+
+6. Update employee id to 210 for an employee with first name Steve and last name Rogers. Ensure a new record is created if employee does not exist in collection. (2 Marks)
+   > db.employees.update({$and: [{first_name:"Steve"},{last_name:"Rogers"}]},{$set: {employee_id: 210}}, {upsert: true});
+
+7. Display employees with job title "Accountant" and salary less than 8000 or with job title "Programmer" and salary less than 5000.  (2 Marks)
+   > db.employees.find({ $or : [{ $and : [{"job.job_title": "Accountant"}, {salary: {$lt : 8000}} ]}, { $and : [{"job.job_title": "Programmer"}, {salary: {$lt : 5000}} ]} ]}).pretty();
+
+8. Drop all employee records with department id 10.  (1 Mark) 
+   > db.employees.remove({"department.department_id":10});
+

@@ -1,6 +1,0 @@
-
-Q. Design resume.html web page to show  your academic, personal, projects, skillset information with the help of HTML elements . Explore HTML elements and visual elements
-like fonts, color, fontsize, background color, lists, paragraphs,etc  while designing
-resume pages.
-    Use proper  nested Tables to organize  your resume information.
-

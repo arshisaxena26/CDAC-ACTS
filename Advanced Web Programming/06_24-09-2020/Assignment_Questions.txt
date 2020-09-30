@@ -1,0 +1,11 @@
+
+Q1.Create Registration page
+	-Use center Alignment
+	-Use input type file
+	-Use javascript to print all input fields in alert box
+
+Q2.Create Resume static HTML page(No input fields)
+	-Decorate using CSS
+
+Q3.Create Products(array of objects) in javascript. Show products details in HTML page
+

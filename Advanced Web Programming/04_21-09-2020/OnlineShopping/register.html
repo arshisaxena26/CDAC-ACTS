@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="sytle.css">
+        <script src="scripts/app.js"> </script>
+    </head>
+
+    <body>
+
+        <p>
+            <a href="login.html">LOGIN</a> | <a href="products.html"> View Products </a> | <a href="graphics.html"> GRAPHICS </a>
+        </p>
+
+        <div class="intro"> 
+            <img src="Images/logo1.png" width="90" height="90">
+            <h1>The Big Book Superstore </h1>
+            <h2> Paging All Readers! </h2>
+            <h3> “There is no friend as loyal as a book.”
+                    ― Ernest Hemingway </h3><br>
+        </div>
+
+        <h2> Sign Up! </h2>  
+
+        <form onsubmit="return userRegistration()">
+            <table>
+                 <tr>
+                    <td>
+                        <label for="email">Email Id:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="name">Full Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                    </td>
+                </tr>   
+                    
+                <tr>
+                    <td>
+                        <label for="pass"> Password:</label><br>
+                        <input type="password" id="pass" name="pass" required><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>   
+
+                <tr>
+                    <td>
+                        <label for="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value="India">India</option>
+                            <option value="USA">United States of America</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </td>
+                </tr>   
+                
+                <tr>
+                    <td>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>  
+                
+                <tr>
+                    <td>
+                        <br>
+                        <input type="checkbox" id="rememberme" name="rememberme" value="Remember_Me">
+                        <label for="rememberme">Remember Me</label><br>
+                        <input type="checkbox" id="subscribe" name="vehisubscribecle2" value="subscribe">
+                        <label for="subscribe">Subscibe to Newsletter</label><br>
+                    </td>
+                </tr> 
+            
+            </table>
+        </form> 
+    </body>
+</html>

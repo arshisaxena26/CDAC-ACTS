@@ -1,0 +1,98 @@
+body {
+  background-color: floralwhite;
+  }
+
+  h1 {
+    text-shadow: 2px 2px;
+    color: black;
+  }
+
+  h2{
+
+    font-style: italic;
+    color: black;
+    text-align: center;
+  }
+
+  h3 {
+    font-style: oblique;
+    color: black;
+  }
+
+  ul {
+    padding-left: 100px;
+  }
+
+  ul li {
+    font-size: 20px;
+    list-style-type: cjk-ideographic;
+    padding-left: 16px;
+    margin: 5px;
+  }
+
+  input{
+    width: 50%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: white;
+  }
+
+  form,table {
+    width: 60%;
+    position: absolute;
+    left: 15%;
+}
+
+label{
+    width: 60%;
+    position: absolute;
+    left: 1%;
+}
+
+label[for=male],[for=female],[for=other],[for=rememberme],[for=subscribe]{
+  width: 80%;
+  position: absolute;
+  left: 1%;
+}
+
+th, td {
+    text-align: right;
+  }
+
+input[type=submit] {
+    left: 50%;
+    background-color: #9AE5F8;
+}
+
+p{               
+  width: 60%;
+  position: absolute;
+  left: 70%;      
+ }
+
+ input[type=radio],[type=checkbox]{
+  width: 10%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.accountLinks {
+    width: 60%;
+    position: absolute;
+    left: 80%;
+}
+
+.intro {
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+}

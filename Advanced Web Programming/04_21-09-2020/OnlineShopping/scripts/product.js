@@ -7,13 +7,12 @@ var products = [
 ]
 
 var showProducts = function(){
-//var element = document.getElementById("showProducts");
+var element = document.getElementById("showProducts");
 
 var i;
 var text = "";
 for(i=0; i<products.length; i++) {
      text+= "<li>" + products[i].title + "</li><br>";
     }
-//element.innerHTML = text;
-document.write("<ol>"+text+"</ol>");    
+element.innerHTML = text;   
 }

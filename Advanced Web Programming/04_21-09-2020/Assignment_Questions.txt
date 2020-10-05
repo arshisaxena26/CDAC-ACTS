@@ -1,7 +1,0 @@
-
-1.Implement login.html to validate Username and Password on login button click event handler.
-2.Implement register.html file to accept all user registration information on submit button cliked and show all information in Broswer  console window.
-
-3.Create new graphics.html web page  in existing Web site. Add three buttons rectangle, Circle and line . on click of those button display Graphics shapes drawn using HTML 5 Canvas elemnt. 
-
-4.Add products.html web page in existing website. add prodct.js file in website. define array of products to display using json syntax as global variable. Add  Show products stored in collection on HTML file loading using  DOM structure. Explore how to use  for  loop to dynamically show product details using  paragraph or list html elements.

@@ -1,0 +1,102 @@
+ASDM - CDG Official INTERNAL Assignment
+Date of Assignment : 8th October 2020
+Date of Submission : 9th October 2020
+
+Assignment on DOCKER
+
+Q1
+For installation of docker
+Architecture Required is 64 bit 
+kernel Version required is 3.8 or more
+How To Check Prerequisites on linux box?
+    • uname -i
+-------  x86_64  -----------
+    • uname -r
+--------- 5.4.0-48-generic -----------
+
+Q2
+what is difference between docker image & Container?
+    • A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.
+
+    • A Docker container is a virtualized run-time environment where users can isolate applications from the underlying system. These containers are compact, portable units in which you can start up an application quickly and easily.
+
+Q3
+Put them in Correct Order
+1. Docker Image
+2. File
+3. Docker Container
+    • Docker Image, Docker Container, File
+
+Q4
+What are various commands to find docker version
+    • docker version
+    • docker version --format '{{.Server.Version}}'
+    • docker version --format '{{json .}}'
+
+Q5
+Which command can be run to make sure that you can connect to repository of docker Over internet i.e. docker hub. 
+    • docker pull repository_name
+
+Q6 
+If i want to know that if centos image is available on DockerHub or not, which command do i need to run
+    • docker search centos
+
+Q7
+what is diff betn running an image with/without "-it"
+    • docker run -it image command will create the container providing an interactive shell to interact with the container.
+    • docker run image command will only create the container.
+
+
+Q8
+If i make changes to particular container
+for eg web server and I exit from it 
+    A.	How do back to that container 
+    • docker exec -ti container_id command
+
+    B.	if I go back to that Container will that web server will be installed ?
+    • Changes will be preserved. 
+
+Q9.
+So from above question when we have installed web server in the Container, can i save that modified container as new image 
+    • Yes.
+    • docker commit  container_id image_name:tag
+
+Q10.
+How do i list the following type Container 
+1. Active
+    • docker ps -a -f status=running
+2. InActive
+    • docker ps -a -f status=exited
+3. Active+InActive
+    • docker ps -a
+4. Latest Container I Created.
+    • docker ps -l
+
+Q11.
+Using Docker Command what actions can be executed on a particular container ID
+    • Start Container
+    • Stop Container
+    • Remove Container
+    • Create a new Image
+    • Copy Files
+    • Take Container’s Shell using attach command
+    • Execute a command from outside the Container using exec command
+    • etc.
+
+Q12.
+From Que 9  lets say I able to to save modified container as new image , now can i push that image over docker hub, If Yes How ?
+    • Yes.
+    • docker push image_name:tag ( image_name should be same as repository name )
+
+Q13.
+There are 2 ways to  create image
+   1. Pulling from Docker
+   2. To create image
+   Create a sample docker file which will create/build a ubuntu18.0 image.
+
+    • vi Dockerfile
+ FROM ubuntu:18.04
+
+    • docker build ./
+
+

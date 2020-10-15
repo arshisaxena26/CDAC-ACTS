@@ -1,0 +1,56 @@
+ASDM - CDG Official INTERNAL Assignment
+Date of Assignment : 8th October 2020
+Date of Submission : 9th October 2020
+
+----Assignment on GIT-----
+
+1. What is the purpose of this command - curl -u "username" https://api.github.com
+    • Basic Authentication 
+  
+   What is the requests per hour limit for APIs in github
+    • Min - 5,000 requests per hour
+    • Max - 12,500 requests per hour
+
+  Give a working example using curl calls for each of the following API methods in Github:
+
+	-> GET – Retrieve the resource
+    • curl https://api.github.com/users/username
+
+	-> PUT/PATCH – Update resource
+    • curl -X PUT -d 'new_value' URL_PATH/key
+
+
+	-> POST – Create a resource
+    • curl --user "username" --request POST --data '{"description":"Created via API","public":"true","files":{"file1.txt":{"content":"Demo"}}' 		https://api.github.com/gists
+	
+	
+	-> DELETE – Delete resource
+    • curl -X DELETE  URL_PATH
+
+
+  Rename the Repository using API
+    • curl -X POST -u <UserName>:<Generated-Token> -X PATCH -d “{\”name\”:\”<NewRepoName>\”}” https://api.github.com/repos/<user-name>/<OldRepoName>
+
+  Delete the Repository using API
+    • curl -X DELETE -u <UserName>:<Generated-Token>https://api.github.com/repos/<user-name>/<reponame>
+
+  List Collaborators for a Repository	
+    • curl -X GET -u <UserName>:<Generated-Token>https://api.github.com/repos/<user-name>/<repo-name>/collaborators | grep -w login
+
+  List branches in a user repository or Using GITs APIs - get list of all project branches
+    • curl -X GET -u <UserName>:<Generated-Token>https://api.github.com/repos/<user-name>/<repo-name>/branches | grep -w name 
+
+  Search all repositories owned by a particular user.
+    • curl -X GET -u <UserName>:<Generated-Token>https://api.github.com/users/<user-name>/repos | grep -w clone_url
+
+
+
+2. Which one of the following is not part of the data structure of a Git repository?
+		a. Body element
+		b. Branch pointer
+		c. Commit object
+		d. HEAD pointer
+		e. None of the above (i.e., they are all parts)
+
+    • Body Element
+

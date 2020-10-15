@@ -1,0 +1,45 @@
+C. JAVA Practice LAB
+Date : 13th Oct 2020
+
+Q1
+
+Create  java  application called EmpService(using suitable data structure) . This application must provide following functionalities.
+
+1. Hire New  Employee: emp id(unique: string ), name, dob(LocalDate), salary and departmentId(string)
+        Ensure no duplicate emp ids.
+
+2. View Employee Details: i/p id 
+        O/P emp details or error message generated via custom exception.
+
+3. View  Employees from a specific department ,sorted by dob.
+        I/P department id.
+        Display all the employee details , from specified dept , sorted in asc  order as per dob(date of birth). 
+        Use for sorting(custom ordering).
+
+4. Save n Exit : Before terminating application , save all emp details in a text file(file name : emp_info.txt) , using buffering.
+
+Non-Functional Requirements:
+    1. The application must use appropriate collection to save all the required information.
+    2. Application must throw appropriate exceptions whenever necessary.
+    3. Application must be created using appropriate layers.(eg : CollectionUtils ,IOUtils , Custom exception , core classes n tester)
+
+
+Q2
+Write a java application to store & restore a file of volunteers ,  store at least 5 such records volunteer
+               volunteerId:int,
+               vName:String,
+               Hobbies:List<String>
+               isAvailable:Boolean
+               DOB:LocalDate
+
+  Rules : User Should Be able to add & also update the Information of volunteers.
+                Volunteer with having same name and same DOB is not allowed.
+                DOB of volunteer should not less than 1-1-1990 while adding new
+                record
+                Show volunteers Who have Same Hobbies.
+                Store Updated volunteer info in binary file using
+                serialization.
+              	 Information should be restored using from binary file using de serialization.
+
+
+      If possible create separate threads one for adding the Volunteer’s information & another thread for display purpose. Ensure thread safety , to avoid concurrent modification exception.

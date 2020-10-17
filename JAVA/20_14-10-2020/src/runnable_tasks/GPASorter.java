@@ -23,7 +23,9 @@ public class GPASorter implements Runnable {
 	public void run() {
 		System.out.println(currentThread().getName() + " strted ");
 		try {
-			storeStudentDetails(sortStudentsGPAListMap(map), fileName);
+			synchronized (map) {
+				storeStudentDetails(sortStudentsGPAListMap(map), fileName);
+			}
 		} catch (Exception e) {
 			System.out.println(currentThread().getName() + " error " + e);
 		}

@@ -22,7 +22,9 @@ public class SubjectSorter implements Runnable {
 	public void run() {
 		System.out.println(currentThread().getName() + " strted ");
 		try {
-			storeStudentDetails(sortStudentsSubjectListMap(map), fileName);
+			synchronized (map) {
+				storeStudentDetails(sortStudentsSubjectListMap(map), fileName);
+			}
 		} catch (Exception e) {
 			System.out.println(currentThread().getName() + " error " + e);
 		}

@@ -23,7 +23,9 @@ public class DobSorter implements Runnable {
 	public void run() {
 		System.out.println(currentThread().getName() + " strted ");
 		try {
-			storeStudentDetails(sortStudentsDoBListMap(map), fileName);
+			synchronized (map) {
+				storeStudentDetails(sortStudentsDoBListMap(map), fileName);
+			}	
 		} catch (Exception e) {
 			System.out.println(currentThread().getName() + " error " + e);
 		}

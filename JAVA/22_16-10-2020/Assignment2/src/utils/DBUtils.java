@@ -11,6 +11,6 @@ public class DBUtils {
 		String url = "jdbc:mysql://localhost:3306/employees?useSSL=false";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
-		return DriverManager.getConnection(url, "root", "@R$hi123");
+		return DriverManager.getConnection(url, "root", "password");
 	}
 }

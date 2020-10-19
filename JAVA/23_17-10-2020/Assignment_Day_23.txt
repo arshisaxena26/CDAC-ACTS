@@ -1,0 +1,37 @@
+Day 23
+
+Solve customer management CRUD application
+
+1.1 Import SampleCustomers_Schema.sql to customers database in mysql.
+
+1.2 Create Customer POJO, DAO & Tester for the following cases.
+
+1.3 Menu
+	1. User Login
+	I/P email n passsord
+	O/P In case of success : display complete customer details . 
+	In case of invalid login : error mesg
+	eg : In ICustomerDao
+	Customer authenticateUser(email, pwd) throws SE
+
+	2. New User registration
+	I/P all details (except customer id)
+	O/P message
+
+	3. Change password
+	I/P : email ,old pwd , new pwd
+	O/P message
+
+	4. Un subscribe Customer
+	i/p : customer id
+	O/P message
+
+
+
+
+
+
+
+
+
+

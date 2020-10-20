@@ -1,0 +1,32 @@
+Day1
+
+Assignemnt Design (Refer to voting_assignment.png)
+
+1. Import Dependencies/voting_schema.sql to mysql.
+
+2. POJO : Voter POJO & Candidate POJO
+
+3. DBUtils
+
+4. DAo i/f
+eg : IVoterDao
+Voter authenticateVoter(String email,String pwd) throws SqlException
+
+5. Write DAO  Impl class (JDBC based DAO )
+
+6. welcome page : login.html(post) --> LoginServlet
+
+	Override : 
+
+	6.1 init : Create DAO instance 
+
+	6.2 doPost : invoke CRUD method of DAO
+	In case of success display voter details. 
+	Otherwise : send a link "Retry" --to take client back to login page.
+
+	6.3 destroy method : invoke Dao' s cleanup.
+
+
+
+
+

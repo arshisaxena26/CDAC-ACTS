@@ -8,6 +8,6 @@ public class DBUtils {
 	public static Connection fetchDBConnection() throws ClassNotFoundException, SQLException {
 		String url = "jdbc:mysql://localhost:3306/voting_schema?useSSL=false";
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		return DriverManager.getConnection(url, "root", "@R$hi123");
+		return DriverManager.getConnection(url, "root", "password");
 	}
 }

@@ -25,7 +25,7 @@ Non-Functional Requirements:
 
 
 Q2
-Write a java application to store & restore a file of volunteers ,  store at least 5 such records volunteer
+Write a java application to store & restore a file of volunteers, store at least 5 such records volunteer
                volunteerId:int,
                vName:String,
                Hobbies:List<String>

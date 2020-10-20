@@ -29,8 +29,8 @@ public class CustomersDaoImpl implements ICustomersDao {
 
 		try (ResultSet rst = ps1.executeQuery()) {
 			if (rst.next()) {
-				return new Customer(rst.getInt(1), rst.getDouble(2), rst.getString(3), rst.getString(4),
-						rst.getString(5), rst.getDate(6), rst.getString(7));
+				return new Customer(rst.getInt(1), rst.getDouble(2), email, rst.getString(4),
+						password, rst.getDate(6), rst.getString(7));
 			}
 		}
 		return null;

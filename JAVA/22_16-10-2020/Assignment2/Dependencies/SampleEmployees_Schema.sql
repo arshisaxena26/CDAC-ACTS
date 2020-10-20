@@ -1,3 +1,6 @@
+CREATE database employees;
+use employees;
+
 CREATE TABLE my_emp (
 empid int(3) primary key auto_increment,
 name varchar(20),

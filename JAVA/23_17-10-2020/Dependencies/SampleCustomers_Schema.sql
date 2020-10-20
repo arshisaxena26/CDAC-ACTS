@@ -1,3 +1,6 @@
+CREATE database customers;
+use customers;
+
 CREATE TABLE my_customers (
 id int primary key auto_increment,
 deposit_amt double,

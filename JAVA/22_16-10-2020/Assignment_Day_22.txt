@@ -1,15 +1,20 @@
 Day 22
 
-1. Create a distributed application (using TCP/IP) for the following.
-StudentManagementService
-Client sends subject to server (in string form)
-Server (using collections: student details added in a map) sends the list of students(enrolled in a subject) with distinction (gpa > 7) to the client.
+1. Create a distributed application (using TCP/IP) for StudentManagementService:
+
+1.1Client sends subject to server (in string form)
+
+1.2Server (using collections: student details added in a map) sends the list of students(enrolled in a subject) with distinction (gpa > 7) to the client.
 If Subject name is valid , return list of students for the specified subject. 
 Otherwise return suitable error message.
 
-In client side application : display error message or the list.
+1.3In client side application : display error message or the list.
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-2. Check JDBC connectivity & write simple JDBC application to display emp details.	
+2. Check JDBC connectivity & write simple JDBC application.
+
+2.1 Import Dependencies/SampleEmployees_Schema.sql to mysql.
+2.2 Display emp details.	
 
 
 

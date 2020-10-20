@@ -2,7 +2,7 @@ Day 23
 
 Solve customer management CRUD application
 
-1.1 Import SampleCustomers_Schema.sql to customers database in mysql.
+1.1 Import Dependencies/SampleCustomers_Schema.sql to mysql.
 
 1.2 Create Customer POJO, DAO & Tester for the following cases.
 

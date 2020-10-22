@@ -1,0 +1,14 @@
+Day 3 
+
+Assignemnt Design (Refer to voting_assignment.png)
+
+1. Import Dependencies/voting_schema.sql to mysql.
+
+2. Complete Admin Part of voting Assignment.
+
+
+
+
+
+
+

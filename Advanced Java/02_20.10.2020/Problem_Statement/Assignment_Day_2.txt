@@ -1,0 +1,14 @@
+Day 2.
+
+Assignemnt Design (Refer to voting_assignment.png)
+
+1. Import Dependencies/voting_schema.sql to mysql.
+
+2. Create CandidateDao  -- i/f & implementation classes.
+
+3. Complete voting assignement till showing candidate list page & after casting a vote , show status page, after showing status , invalidate session. (Use HttpSession i/f for session tracking)----- Refer to assignment_help.png
+
+
+
+
+

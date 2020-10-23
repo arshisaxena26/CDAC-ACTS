@@ -19,24 +19,12 @@ public class StatusServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	// Method to display Message to Voters who have already Voted -- since
-	// Redirection default method is GET
+	// Default Redirection Method is GET-- Calling doPost
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html");
-		HttpSession session = req.getSession();
-		Voter voter = (Voter) session.getAttribute("validateVoter");
-		if (voter.getStatus() == 1) {
-			try (PrintWriter pw = resp.getWriter()) {
-				pw.print("<h2>Hello " + voter.getName()
-						+ "</h2><br><h3>You Have Already Voted</h3><br><br><h2><a href='login.html'>VISIT AGAIN!</a></h2>");
-			}
-			session.invalidate();
-		}
+		doPost(req, resp);
 	}
 
 	@Override
-	// Method to display message to Voters who casted their vote -- POST to hide
-	// selected Candidate
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
@@ -45,6 +33,7 @@ public class StatusServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			Voter voter = (Voter) session.getAttribute("validateVoter");
 
+			// Vote Casting Logic
 			if (voter.getStatus() == 0) {
 				VoterDaoImpl voterDao = (VoterDaoImpl) session.getAttribute("VoterDao");
 				CandidateDaoImpl candidateDao = (CandidateDaoImpl) session.getAttribute("CandidateDao");
@@ -63,6 +52,12 @@ public class StatusServlet extends HttpServlet {
 				// calling VoterDao's method to update Voter's vote status
 				System.out.println(voterDao.updateVoterStatus(voter.getVoterID()));
 			}
+
+			// Logic for Voters who have already voted
+			else
+				pw.print("<h2>Hello " + voter.getName()
+						+ "</h2><br><h3>You Have Already Voted</h3><br><br><h2><a href='login.html'>VISIT AGAIN!</a></h2>");
+
 			session.invalidate();
 
 		} catch (Exception e) {

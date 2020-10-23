@@ -27,7 +27,8 @@ public class StatusServlet extends HttpServlet {
 		Voter voter = (Voter) session.getAttribute("validateVoter");
 		if (voter.getStatus() == 1) {
 			try (PrintWriter pw = resp.getWriter()) {
-				pw.print("<h2>Hello " + voter.getName() + "</h2><br><h3>You Have Already Voted</h3>");
+				pw.print("<h2>Hello " + voter.getName()
+						+ "</h2><br><h3>You Have Already Voted</h3><br><br><h2><a href='login.html'>VISIT AGAIN!</a></h2>");
 			}
 			session.invalidate();
 		}
@@ -48,7 +49,8 @@ public class StatusServlet extends HttpServlet {
 				VoterDaoImpl voterDao = (VoterDaoImpl) session.getAttribute("VoterDao");
 				CandidateDaoImpl candidateDao = (CandidateDaoImpl) session.getAttribute("CandidateDao");
 
-				pw.print("<h2>Hello " + voter.getName() + "</h2><br><h3>Your Vote has been Registered!</h3>");
+				pw.print("<h2>Hello " + voter.getName()
+						+ "</h2><br><h3>Your Vote has been Registered!</h3><br><br><h2><a href='login.html'>VISIT AGAIN!</a></h2>");
 
 				// Getting Selected Candidate Name
 				String[] candidateIDs = request.getParameterValues("candidate_name");

@@ -36,8 +36,8 @@ public class CandidateDaoImpl implements ICandidateDao {
 		pst2.setInt(1, candidateID);
 		int update = pst2.executeUpdate();
 		if (update == 1)
-			return "Candidates Table Updated.";
-		return "Candidates Table Updation Failed.";
+			return "Table Updated.";
+		return "Table Updation Failed.";
 	}
 
 	public void cleanup() throws SQLException {

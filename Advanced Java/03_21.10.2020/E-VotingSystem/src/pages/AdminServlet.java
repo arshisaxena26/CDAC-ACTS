@@ -38,7 +38,9 @@ public class AdminServlet extends HttpServlet {
 			List<Candidate> partyVotes = candidateDao.displayPartyVotes();
 			for (Candidate c : partyVotes)
 				pw.print("<tr><td><h3>" + c.getParty() + "</h3></td><td><h3>" + c.getVotes() + "</h3></td>");
-			pw.print("</table>");
+			pw.print("</table><br>");
+
+			pw.print("<h2><a href='login.html'>VISIT AGAIN!</a></h2>");
 
 			session.invalidate();
 

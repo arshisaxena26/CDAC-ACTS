@@ -35,8 +35,8 @@ public class VoterDaoImpl implements IVoterDao {
 		pst2.setInt(1, voterID);
 		int update = pst2.executeUpdate();
 		if (update == 1)
-			return "Voters Table Updated.";
-		return "Voters Table Updation Failed.";
+			return "Table Updated.";
+		return "Table Updation Failed.";
 	}
 
 	public void cleanup() throws SQLException {

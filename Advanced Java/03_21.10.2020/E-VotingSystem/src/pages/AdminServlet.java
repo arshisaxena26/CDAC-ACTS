@@ -2,6 +2,7 @@ package pages;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -27,7 +28,7 @@ public class AdminServlet extends HttpServlet {
 			CandidateDaoImpl candidateDao = (CandidateDaoImpl) session.getAttribute("CandidateDao");
 
 			// Displaying Top Candidates
-			pw.print("<h1>Top Candidate(s)</h1><br><table><th><h3>Name</h3></th><th><h3>Votes</h3></th>");
+			pw.print("<h1>Top Candidates</h1><br><table><th><h3>Name</h3></th><th><h3>Votes</h3></th>");
 			List<Candidate> topCandidates = candidateDao.displayTopCandidates();
 			for (Candidate c : topCandidates)
 				pw.print("<tr><td><h3>" + c.getName() + "</h3></td><td><h3>" + c.getVotes() + "</h3></td>");
@@ -35,13 +36,16 @@ public class AdminServlet extends HttpServlet {
 
 			// Displaying Party Votes
 			pw.print("<h1>Political Party Votes</h1><br><table><th><h3>Party</h3></th><th><h3>Votes</h3></th>");
-			List<Candidate> partyVotes = candidateDao.displayPartyVotes();
-			for (Candidate c : partyVotes)
-				pw.print("<tr><td><h3>" + c.getParty() + "</h3></td><td><h3>" + c.getVotes() + "</h3></td>");
+
+			LinkedHashMap<String, Integer> partyVotes = candidateDao.displayPartyVotes();
+			partyVotes.forEach(
+					(key, value) -> pw.print("<tr><td><h3>" + key + "</h3></td><td><h3>" + value + "</h3></td>"));
+
 			pw.print("</table><br>");
 
 			pw.print("<h2><a href='login.html'>VISIT AGAIN!</a></h2>");
 
+			// Invalidating Session
 			session.invalidate();
 
 		} catch (Exception e) {

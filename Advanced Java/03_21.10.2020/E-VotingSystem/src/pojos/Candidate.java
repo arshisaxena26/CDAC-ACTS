@@ -10,19 +10,15 @@ public class Candidate {
 		// default Constructor
 	}
 
-	// Parameterized Constructor
-	public Candidate(int candidateID, String name, String party, int votes) {
-		super();
-		this.candidateID = candidateID;
+	// Parameterized Constructors as required by DAO Layer
+
+	public Candidate(String name, String party) {
 		this.name = name;
 		this.party = party;
-		this.votes = votes;
 	}
 
-	// Parameterized Constructor excluding auto-increment properties
-	public Candidate(String name, String party, int votes) {
+	public Candidate(String name, int votes) {
 		this.name = name;
-		this.party = party;
 		this.votes = votes;
 	}
 

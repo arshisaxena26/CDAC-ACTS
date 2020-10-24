@@ -4,7 +4,7 @@ Assignemnt Design (Refer to voting_assignment.png)
 
 1. Import Dependencies/voting_schema.sql to mysql.
 
-2. Complete Admin Part of voting Assignment.
+2. Complete Admin Part of voting Assignment.(Refer to admin-help.png)
 
 
 

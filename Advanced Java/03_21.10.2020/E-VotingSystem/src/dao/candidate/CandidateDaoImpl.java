@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import pojos.Candidate;
@@ -17,10 +18,10 @@ public class CandidateDaoImpl implements ICandidateDao {
 
 	public CandidateDaoImpl() throws ClassNotFoundException, SQLException {
 		conn = fetchDBConnection();
-		pst1 = conn.prepareStatement("select * from candidates");
+		pst1 = conn.prepareStatement("select name,party from candidates");
 		pst2 = conn.prepareStatement("update candidates set votes=votes+1 where id=?");
-		pst3 = conn.prepareStatement("select * from candidates where votes = (select max(votes) from candidates)");
-		pst4 = conn.prepareStatement("select * from candidates order by votes desc");
+		pst3 = conn.prepareStatement("select name,votes from candidates order by votes desc limit 2");
+		pst4 = conn.prepareStatement("select party,sum(votes) from candidates group by party order by sum(votes) desc");
 	}
 
 	@Override
@@ -29,7 +30,7 @@ public class CandidateDaoImpl implements ICandidateDao {
 
 		try (ResultSet rst = pst1.executeQuery()) {
 			while (rst.next())
-				candidates.add(new Candidate(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getInt(4)));
+				candidates.add(new Candidate(rst.getString(1), rst.getString(2)));
 		}
 		return candidates;
 	}
@@ -49,20 +50,20 @@ public class CandidateDaoImpl implements ICandidateDao {
 
 		try (ResultSet rst = pst3.executeQuery()) {
 			while (rst.next())
-				topCandidates.add(new Candidate(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getInt(4)));
+				topCandidates.add(new Candidate(rst.getString(1), rst.getInt(2)));
 
 		}
 		return topCandidates;
 	}
 
 	@Override
-	public List<Candidate> displayPartyVotes() throws SQLException {
+	public LinkedHashMap<String, Integer> displayPartyVotes() throws SQLException {
 
-		List<Candidate> partyVotes = new ArrayList<>();
+		LinkedHashMap<String, Integer> partyVotes = new LinkedHashMap<>();
 
 		try (ResultSet rst = pst4.executeQuery()) {
 			while (rst.next())
-				partyVotes.add(new Candidate(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getInt(4)));
+				partyVotes.putIfAbsent(rst.getString(1), rst.getInt(2));
 		}
 		return partyVotes;
 	}

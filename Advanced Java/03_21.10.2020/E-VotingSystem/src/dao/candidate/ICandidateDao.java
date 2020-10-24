@@ -1,6 +1,7 @@
 package dao.candidate;
 
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import pojos.Candidate;
@@ -13,5 +14,5 @@ public interface ICandidateDao {
 
 	List<Candidate> displayTopCandidates() throws SQLException;
 
-	List<Candidate> displayPartyVotes() throws SQLException;
+	LinkedHashMap<String, Integer> displayPartyVotes() throws SQLException;
 }

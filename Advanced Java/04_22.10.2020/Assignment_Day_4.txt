@@ -1,0 +1,10 @@
+Day 4
+
+1.Make E-Voting web application DB independent (use ServletContext)
+(i.e if underlying DB changes ---no changes in java code BUT add DB specific details(JDBC drvr class, dbURL,userName , pwd) in xml based config files)
+Create a context listener, singleton instance of DB connection .
+ 
+
+2. Monitor(display) total no of logged in users for a web site .
+(Hint : HttpSessionListener i/f)
+

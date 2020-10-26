@@ -1,0 +1,5 @@
+Day 5
+
+Complete JSP assignment (Refer to Assignment_Day_4.png)
+1. Using Client Pull
+2. Using Server Pull

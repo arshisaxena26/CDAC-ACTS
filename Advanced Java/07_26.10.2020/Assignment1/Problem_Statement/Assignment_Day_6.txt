@@ -1,0 +1,7 @@
+Day 6 
+
+Assignemnt Design (Refer to voting_assignment.png)
+
+1.1 Import Dependencies/voting_schema.sql to mysql.
+
+1.2 Solve voting assignment using the layers : JSP--JB--DAO--POJO--DB

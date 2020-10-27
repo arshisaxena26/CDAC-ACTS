@@ -1,0 +1,7 @@
+Day 7
+
+1.Complete E-Voting Application adding Centralized Exception Handling in JSP and URL Rewriting.(Refer to voting_assignment.png)
+1.1 Import Dependencies/voting_schema.sql to mysql.
+
+
+2. Create a Hibernate based standalone application, for user registration.

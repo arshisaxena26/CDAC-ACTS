@@ -18,7 +18,7 @@ public class CandidateDaoImpl implements ICandidateDao {
 
 	public CandidateDaoImpl() throws ClassNotFoundException, SQLException {
 		conn = fetchDBConnection();
-		pst1 = conn.prepareStatement("select name,party from candidates");
+		pst1 = conn.prepareStatement("select id,name,party from candidates");
 		pst2 = conn.prepareStatement("update candidates set votes=votes+1 where id=?");
 		pst3 = conn.prepareStatement("select name,votes from candidates order by votes desc limit 2");
 		pst4 = conn.prepareStatement("select party,sum(votes) from candidates group by party order by sum(votes) desc");
@@ -30,7 +30,7 @@ public class CandidateDaoImpl implements ICandidateDao {
 
 		try (ResultSet rst = pst1.executeQuery()) {
 			while (rst.next())
-				candidates.add(new Candidate(rst.getString(1), rst.getString(2)));
+				candidates.add(new Candidate(rst.getInt(1), rst.getString(2), rst.getString(3)));
 		}
 		return candidates;
 	}

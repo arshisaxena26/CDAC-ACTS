@@ -21,6 +21,6 @@
 	</context-param>
 	<context-param>
 		<param-name>password</param-name>
-		<param-value>password</param-value>
+		<param-value>@R$hi123</param-value>
 	</context-param>
 </web-app>

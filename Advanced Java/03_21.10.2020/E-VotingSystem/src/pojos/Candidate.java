@@ -12,9 +12,10 @@ public class Candidate {
 
 	// Parameterized Constructors as required by DAO Layer
 
-	public Candidate(String name, String party) {
+	public Candidate(String name, String party, int candidateID) {
 		this.name = name;
 		this.party = party;
+		this.candidateID=candidateID;
 	}
 
 	public Candidate(String name, int votes) {

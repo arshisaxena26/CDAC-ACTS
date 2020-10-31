@@ -1,0 +1,28 @@
+Day 10
+
+Assignment: 
+
+1. Add one-to-one (bidirectional association between Vendor Entity & Location Entity)
+Location : id(PK), city, state, country : all string type
+Use proper annotations. (Configure Location as the owning side of the association)
+
+2. Add one-to-one (unidirectional association between Vendor Entity & PaymentMode embeddable value type)
+PaymentMode : type(Enum : CREDIT_CART,DEBIT_CARD,NETBANKING), amount (double), paymentDate (LocalDate)
+
+3. Add one-to-many (unidirectional association between Vendor Entity & basic value type)
+phoneNo : string
+
+
+4. Vendor DAO method : registerVendor(Vendor v), fetchAllDetails(String email)
+
+5. Tester
+
+	1. Accept all Vendor Details
+	I/P : all vendor details, 2 a/c details, Location details, payment mode details and 2 phone numbers
+	Confirm if data is saved suitably across different tables.
+
+	2. Display complete vendor details
+	I/P : vendor email 
+	Display : all vendor details,  a/c details, Location details, payment mode details and Phone Numbers
+
+

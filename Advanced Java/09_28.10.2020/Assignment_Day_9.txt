@@ -1,0 +1,29 @@
+Day 9
+
+Assignment based upon one-to-many bi-directional association.
+
+One Vendor can have multiple BankAccounts(Vendor 1<---->* BankAccount)
+Design bi-directional association between the two & test it.
+
+POJO :
+Vendor : id(Integer),name,email(unique),password,reg amount,reg date (LocalDate),role (enum --vendor / admin)
+BankAccount : acctId(PK), type(enum : SAVING,CURRENT,FD,LOAN,DMAT), balance(double)
+
+1. Add suitable annotations & test table creation
+
+2. Add helper methods in POJO to add and remove account.
+
+3. Solve
+
+	3.1 Accept new vendor details.(all vendor details except id n account details)
+	Accept 2 a/c details . Save these to DB (confirm cascading)
+	Expected o/p : 1 record inserted in vendors table, 2 recs in accounts table with FK values set correctly.
+
+	3.2 Un subscribe vendor 
+	I/P : vendor id
+	Expected o/p : vendor details n associated account details should be deleted from DB
+
+	3.3 Fetch Vendor details
+	I/P : email , password
+	In case of validated vendor : display vendor details n associated account details.
+

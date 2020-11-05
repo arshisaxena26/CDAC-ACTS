@@ -1,0 +1,43 @@
+Day 16
+
+Create RESTful web service for using a resource : Student
+id,firstName,lastName,email(unique),dob(LocalDate),marks
+
+1. Create a layered spring boot application 
+Rest controller --Service --DAO repository --POJO
+Instead of directly sending resource, use ResponseEntity
+Test it with postman
+
+Objectives:
+
+1. List all students 
+2. List all students with date of birth after a specific date--Date should be supplied as URI variable from front end.
+3. List all students with lastname starting with some prefix--prefix should be supplied as URI variable from front end.
+4. List all students with marks in the range of begin n end--begin and end should be supplied as request parameters.
+   (test url : localhost:8080/students/marks?begin=60&end=100)
+
+5. Create a new student record
+{
+        "firstName": "kiara",
+        "lastName": "fraser",
+        "email": "kiara@gmail.com",
+        "dob": "1982-11-11",
+        "marks": 29
+    }
+
+6. Delete existing student record
+	i/p (via path var) : student id
+
+7. Update student marks and last name
+
+	(use put method)
+	Send marks n lastName in JSON object format.
+	Send student id using a URI variable.
+	
+	eg : URL(put method)  : http://host:port/students/1
+	
+	{
+        "lastName": "fraser",
+        "marks": 29
+  	  }
+

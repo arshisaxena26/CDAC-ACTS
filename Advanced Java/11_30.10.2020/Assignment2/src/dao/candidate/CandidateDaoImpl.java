@@ -57,7 +57,7 @@ public class CandidateDaoImpl implements ICandidateDao {
 		List<Candidate> topCandidates = new ArrayList<>();
 		Session session = getSf().getCurrentSession();
 		Transaction tx = session.beginTransaction();
-		String jpql = "select c from Candidate c order by c.votes desc";
+		String jpql = "select new pojos.Candidate(votes,name) from Candidate c order by c.votes desc";
 
 		try {
 			topCandidates = session.createQuery(jpql, Candidate.class).setMaxResults(2).getResultList();
@@ -76,7 +76,7 @@ public class CandidateDaoImpl implements ICandidateDao {
 		List<Candidate> partyVotes = new ArrayList<Candidate>();
 		Session session = getSf().getCurrentSession();
 		Transaction tx = session.beginTransaction();
-		String jpql = "select c from Candidate c order by c.votes desc";
+		String jpql = "select new pojos.Candidate(party,votes) from Candidate c order by c.votes desc";
 		try {
 			partyVotes = session.createQuery(jpql, Candidate.class).getResultList();
 			tx.commit();

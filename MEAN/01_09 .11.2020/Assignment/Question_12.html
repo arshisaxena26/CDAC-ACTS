@@ -1,0 +1,33 @@
+<!-- Question : Create a web page to calculate the Compound Interest.
+-->
+
+<html>
+	<head>
+		<script>
+			function calculateCompoundInterest(p,n,r) {
+				
+				document.write ("Principal : " + p + " rs <br>");
+				document.write ("Rate of Interest : " + r + "% <br>");
+				document.write ("Period : " + n + " yr <br>");
+				
+				var interest = ( p * Math.pow(1 + r / 100, n) ) - p;
+				
+				document.write ("Compound Interest : " + interest);
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<p>-------------------------------------------------------------------------------------------</p>
+		<h2>CALCULATE COMPOUND INTEREST</h2>
+		<p>-------------------------------------------------------------------------------------------</p>
+		<script>
+				var p = prompt("Enter Principal Amount");
+				var n = prompt("Enter Period in Years");
+				var r = prompt("Enter Rate of Interest");
+			
+				calculateCompoundInterest(p,n,r);
+		</script>
+	</body>
+</html>

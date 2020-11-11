@@ -1,0 +1,27 @@
+<!-- Question :  Write a program min() that takes any number of arguments and returns minimum number in the set of arguments.
+				 Do not use the Math predefined object
+-->
+
+<html>
+	<head>
+		<script>
+				function min() {
+					var minNum = arguments[0];
+					
+					for (i=1; i<arguments.length; i++){
+						if(arguments[i] < minNum) 
+							minNum = arguments[i];
+					}
+					document.write ("Minimum value : "+ minNum + "<br>");
+				}
+		</script>
+	</head>
+
+	<body>
+		<script>
+				min(101, 22, 33, 44, 55);
+				min(9900, 888);
+				min(10000, 8999, 6767);	
+		</script>
+	</body>
+</html>

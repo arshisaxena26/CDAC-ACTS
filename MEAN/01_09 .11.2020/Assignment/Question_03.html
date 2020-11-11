@@ -1,0 +1,40 @@
+<!-- Question :  Write a program that accepts two numbers and a operator like (+,-,*, /) from user and performs
+				 the appropriate operation indicated by the operator. 
+-->
+
+<html>
+	<head>
+	</head>
+
+	<body>
+		<script>
+			var num1 = parseInt(prompt("Enter first number"));
+			var num2 = parseInt(prompt("Enter second number"));
+			var operator = prompt("Enter Operator");
+
+			switch(operator){
+
+				case "+" : 
+					document.write("Result: " + (num1 + num2));
+					break;
+
+				case "-" : 
+					document.write("Result: " + (num1 - num2));
+					break;
+
+				case "*" : 
+					document.write("Result: " + (num1 * num2));
+					break;
+
+				case "/" : 
+					document.write("Result: " + (num1 / num2));
+					break;
+
+				default: 
+					document.write("Invalid Operator");
+					break;
+			}
+
+		</script>
+	</body>
+</html>

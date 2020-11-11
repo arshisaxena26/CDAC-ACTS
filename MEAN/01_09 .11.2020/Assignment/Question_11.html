@@ -1,0 +1,34 @@
+<!-- Question : Write a program to display Fibonacci series.
+-->
+
+<html>
+	<head>
+		<script>
+			function fibonacci(num) {
+				
+				var t1 = 0;
+				var t2 = 1;
+				var nextTerm;
+				
+				document.write ("Fibonacci series : <br>");
+				
+				for (i = 1; i <= num; i++) {
+					
+					document.write(t1 + "<br>");
+					
+					nextTerm = t1 + t2;
+					t1 = t2;
+					t2 = nextTerm;
+				}
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<script>
+				var num = prompt("Enter the number of terms");
+				fibonacci(num);
+		</script>
+	</body>
+</html>

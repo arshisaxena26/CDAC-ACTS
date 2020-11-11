@@ -1,0 +1,10 @@
+Adv JAVA  Assignment
+
+1. Develop Flight reservation system using Spring Boot Web MVC application, using Spring Data JPA in the persistence layer.
+
+	1.1 It's not a REST backend API. (Meaning it will have a JSP based view Layer)
+
+	1.2 Must be developed using a layered architecture based upon Dependency Injection.
+
+	1.3 Refer to flight reservation system.png for the details.
+

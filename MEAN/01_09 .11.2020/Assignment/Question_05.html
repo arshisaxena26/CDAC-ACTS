@@ -1,0 +1,24 @@
+<!-- Question :  Write a program to find sum of digits of given five-digit number.
+-->
+
+<html>
+	<head>
+	</head>
+
+	<body>
+		<script>
+			var num = prompt("Enter a five-digit number");
+
+			var sum = 0;
+			var i = 0;
+
+			while (num != 0){
+				i = num % 10;
+				sum += i;
+				num = parseInt(num / 10);
+			}
+
+			document.write("Sum of digts : " + sum);
+		</script>
+	</body>
+</html>

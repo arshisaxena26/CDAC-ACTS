@@ -1,0 +1,28 @@
+<!-- Question :  Write Javascript function to find the sum and average of all passed parameters.
+-->
+
+<html>
+	<head>
+		<script>
+			function sumAndAverageCalc() {
+				var sum = 0;
+				var avg = 0;
+				
+				for(i = 0; i < arguments.length; i++){
+					sum += arguments[i];
+				}				
+				avg = sum / arguments.length;
+				
+				document.write ("Sum : " + sum + "<br>Average : " + avg + "<br><br>");
+			}
+		</script>
+	</head>
+
+	<body>
+		<script>
+				sumAndAverageCalc(12, 34, 78, 90);
+				sumAndAverageCalc(1, 3, 5, 7, 9);
+				sumAndAverageCalc(123, 346, 490);
+		</script>
+	</body>
+</html>

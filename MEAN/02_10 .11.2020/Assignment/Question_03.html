@@ -1,0 +1,26 @@
+<!-- Question : Accept and store names of 6 employees into array and display in sorted order of names.
+-->
+
+<html>
+	<head>
+			<script>
+					function sortNames() {
+						var str = document.getElementById("names").value;
+						var arrNames = str.split(",");
+
+						if(arrNames.length == 6)
+							document.getElementById("list").innerHTML = arrNames.sort();
+						else
+							document.getElementById("list").innerHTML = "Please Enter 6 Names";
+					}
+		</script>
+	</head>
+
+	<body>
+			<h3>Enter 6 Employee Names</h3>
+			<input type="text" id="names">
+			<input type="button" value="Sort" onclick="sortNames()">
+			<br>
+			<span id="list"></span>
+	</body>
+</html>

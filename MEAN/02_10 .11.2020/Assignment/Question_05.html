@@ -1,0 +1,61 @@
+<!-- Question : Create a custom object for rectangle and circle. 
+				Individual Rectangle objects should be able to store dimension, and have methods to print area and perimeter.
+				Individual Circle objects should be able to store radius, and have methods to print area and circumference. 
+				Display dimensions, area and perimeter of rectangle and circle objects. Make use of pre-defined objects.
+-->
+
+<html>
+	<head>
+			<script>
+					function Rectangle(length, breadth) {
+						
+						this.length = length;
+						this.breadth = breadth;
+						
+						this.area = function() {
+							 document.write("Area of Rectangle : " + length * breadth + "<br>");
+						}
+						
+						this.perimeter = function() {
+							 document.write("Perimeter of Rectangle : " + 2 * (length + breadth) + "<br>");
+						}
+						
+						this.dimensions = function() {
+							document.write("Rectangle [length : " + length + ", breadth : " + breadth +"]<br><br>");
+						}
+					}
+				
+				function Circle(radius) {
+					
+						this.radius = radius;
+		
+						this.area = function() {
+							 document.write("Area of Circle : " + Math.PI * Math.pow(radius, 2) + "<br>");
+						}
+					
+						this.circumference = function() {
+							 document.write("Circumference : " + 2 * Math.PI * radius + "<br>");
+						}
+						
+						this.dimensions = function() {
+							document.write("Circle [radius : " + radius +"]");
+						}
+					}
+			</script>
+	</head>
+
+	<body>
+		<script>
+				var rect = new Rectangle(2,5);
+				rect.area();
+				rect.perimeter();
+				rect.dimensions();
+			
+				var circle = new Circle(3);
+				circle.area();
+				circle.circumference();
+				circle.dimensions();
+				
+		</script>	
+	</body>
+</html>

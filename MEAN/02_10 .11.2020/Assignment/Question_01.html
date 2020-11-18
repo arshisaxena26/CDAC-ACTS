@@ -1,0 +1,107 @@
+<!-- Question : Create a web page that displays the current date in the format specified as in example below.
+				Also as per current time, suitable greeting should be printed.
+
+				Today is Monday, 24 April 2000, Welcome and Good Afternoon to You.
+				Number of days left till end of year : <display>
+-->
+
+<html>
+	<head>		
+	</head>
+
+	<body>
+		<script>
+				var d = new Date();
+				var day = d.getDay();
+				var dayString;
+			
+				switch(day) {
+					case 0:
+						dayString = "Sunday";
+						break;
+					case 1:
+						dayString = "Monday";
+						break;
+					case 2:
+						dayString = "Tuesday";
+						break;
+					case 3:
+						dayString = "Wednesday";
+						break;
+					case 4:
+						dayString = "Thursday";
+						break;
+					case 5:
+						dayString = "Friday";
+						break;
+					case 6:
+						dayString = "Saturday";
+						break;	
+				}
+			
+			var date = d.getDate();
+			var month = d.getMonth();
+			var monthString;
+			
+			switch(month) {
+					case 0:
+						monthString = "January";
+						break;
+					case 1:
+						monthString = "February";
+						break;
+					case 2:
+						monthString = "March";
+						break;
+					case 3:
+						monthString = "April";
+						break;
+					case 4:
+						monthString = "May";
+						break;
+					case 5:
+						monthString = "June";
+						break;
+					case 6:
+						monthString = "July";
+						break;
+					case 7:
+						monthString = "August";
+						break;	
+					case 8:
+						monthString = "September";
+						break;	
+					case 9:
+						monthString = "October";
+						break;	
+					case 10:
+						monthString = "November";
+						break;	
+					case 11:
+						monthString = "December";
+						break;	
+				}
+			
+			var year = d.getFullYear();
+			var time = d.getHours();
+			var timeString;
+			
+			if(time >= 6 && time < 12) 
+				timeString = "Morning";
+			else if(time >= 12 && time < 17)
+				timeString = "Afternoon";
+			else if(time >= 17 && time < 20)
+				timeString = "Evening";
+			else
+				timeString = "Night";
+
+			var yearEnd = new Date(year+1, 0, 0);
+			var timeDifference = yearEnd.getTime() - d.getTime();
+			var daysLeft = Math.floor(timeDifference / (1000 * 3600 * 24));
+			
+			document.writeln("Today is " + dayString + ", " + date + " " + monthString + " " + year + ", Welcome and Good " + timeString + " to you.<br><br>");
+			document.write("Number of days left till end of year : " + daysLeft);
+			
+		</script>
+	</body>
+</html>

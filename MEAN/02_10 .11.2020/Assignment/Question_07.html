@@ -1,0 +1,70 @@
+<!-- Question : Create an array that holds 4 employee objects and displays each emp detail in a table. 
+				Emp details could be empid, empname and salary. 
+				Use for each loop to inspect all properties of each object.
+-->
+
+<html>
+	<head>
+		
+		<style>
+			table,tr,th,td {
+				border  : 1px solid black;
+			}
+		</style>
+		
+		<script>
+				var employees = [
+				{
+					"id" : "1",
+					"name" : "John Miller",
+					"salary" : "200000"
+				},
+				{
+					"id" : "2",
+					"name" : "Emily Watson",
+					"salary" : "309000"
+				},
+				{
+					"id" : "3",
+					"name" : "John Stuart",
+					"salary" : "109900"
+				},
+				{
+					"id" : "4",
+					"name" : "Serena Waldorf",
+					"salary" : "908000"
+				}	
+			];
+		</script>	
+		
+	</head>
+
+	<body>
+			<table id="empTable">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Salary</th>
+				</tr>
+			</table>	
+		
+		<script>
+				
+				var table = document.getElementById("empTable");
+				
+				employees.forEach(emp => {
+				  var row = table.insertRow();
+				  
+				  var id = row.insertCell(0);
+				  id.innerHTML = emp.id;
+				  
+				  var name = row.insertCell(1);
+				  name.innerHTML = emp.name;
+				  
+				  var salary = row.insertCell(2);
+				  salary.innerHTML = emp.salary;
+				});
+			
+			</script>
+	</body>
+</html>

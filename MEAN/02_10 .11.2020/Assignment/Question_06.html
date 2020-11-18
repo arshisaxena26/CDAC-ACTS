@@ -1,0 +1,29 @@
+<!-- Question : An array contains a set of 5 words. 
+				Write Javascript to reverse each word and arrange the resulting words in alphabetical order. 
+				Make use of functions.
+-->
+
+<html>
+	<head>
+		<script>
+			function reverseAndSort(words){
+	
+				for(i = 0; i < words.length; i++)
+					words[i] = words[i].split("").reverse().join("");
+				
+				return words.sort();
+			}
+		</script>	
+	</head>
+
+	<body>
+		<script>
+			var words = ["Good","Morning","Rise","And","Shine"];
+			document.write("Original Words : " + words + "<br><br>");
+			
+			words = reverseAndSort(words);
+			
+			document.write("Words Reversed and Sorted : " + words);
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Question : Create a HTML form that accepts radius and displays the area and circumference of a circle. 
+				Make use of Math object.
+-->
+
+<html>
+	<head>
+		
+		<script>
+				function calculateAreaAndCircumference () {
+					
+					var radius = document.getElementById("radius").value;
+					
+					var area = Math.round(Math.PI * Math.pow(radius, 2));
+					var circumference = Math.round(2 * Math.PI * radius);
+					
+					document.getElementById("areaAndCircumference").innerHTML = "Area : " + area + "<br><br>Circumference : " + circumference;
+					
+				}
+		</script>	
+		
+	</head>
+
+	<body>
+		
+		<form>
+			<table>
+				<tr>
+					<td>Enter Radius : </td>
+					<td><input type="number" id="radius"></td>
+				</tr>
+			</table>
+
+			<br><br>
+
+			<input type="button" value="display" onclick="calculateAreaAndCircumference()">
+
+			<br><br>
+
+			<span id="areaAndCircumference"/>
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- Question : Create a HTML acccepting inputs of "String", "Substring" and "Replace with String" from User. 
+    			Use JS to manipulate strings. Display the output below the button.
+					1st radio button : search the given sub string (second text box) in main string (first text box)
+					2nd & 3rd radio button: convert one of the strings to upper/lower case
+					4th radio button : trim spaces around first string
+					5th radio button : concatenate strings in first and 2nd text boxes
+					6th radio button : Replace with given string
+-->
+
+<html>
+	<head>
+		
+		<script>
+			
+			function stringManipulations() {
+				
+				var string = document.getElementById("str").value;
+				var substring = document.getElementById("substring").value;
+				var replace = document.getElementById("replaceString").value;
+				
+				var radioGroup = document.getElementsByName("strManipulation");
+				
+				for(i = 0; i < radioGroup.length; i++) {
+					
+					if(radioGroup[i].checked) {
+						
+						switch (radioGroup[i].value) {
+								
+							case "substr" :
+								document.getElementById("result").innerHTML = string.includes(substring);
+								break;
+							
+							case "upper" :
+								document.getElementById("result").innerHTML = string.toUpperCase();
+								break;
+							
+							case "lower" :
+								document.getElementById("result").innerHTML = string.toLowerCase();
+								break;
+							
+							case "trim" :
+								document.getElementById("result").innerHTML = string.trim();
+								break;
+							
+							case "concat" :
+								document.getElementById("result").innerHTML = string.concat(substring);
+								break;
+							
+							case "replace" :
+								document.getElementById("result").innerHTML = string.replace(string,replace);
+								break;	
+						}
+					}
+				}
+			}
+				
+		</script>	
+		
+	</head>
+
+	<body>
+		<form>
+				Enter String : <input type="text" id="str"><br><br>
+				Enter Sub String : <input type="text" id="substring"><br><br>
+				Replace with String : <input type="text" id="replaceString"><br><br>
+				
+				<input type="radio" name="strManipulation" id="substr" value="substr">
+				<label>Search Substring in Main String</label>
+				
+				<input type="radio" name="strManipulation" id="upper" value="upper">
+				<label>To Upper Case</label>
+				
+				<input type="radio" name="strManipulation" id="lower" value="lower">
+				<label>To Lower Case</label>
+				
+				<input type="radio" name="strManipulation" id="trim" value="trim">
+				<label>Trim Spaces</label>
+				
+				<input type="radio" name="strManipulation" id="concat" value="concat">
+				<label>Concatenate</label>
+				
+				<input type="radio" name="strManipulation" id="replace" value="replace">
+				<label>Replace</label><br><br>
+				
+				<input type="button" value="Submit Query" onclick="stringManipulations()"><br><br>
+			
+				<span id="result"/>
+			
+		</form>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!-- Question : Payment calculator: 
+				Create a web page and calculate Payment Information based on Loan Information.
+				Validate Loan information textfields for numbers and Payment Information textfields should be uneditable. 
+				The other constraints are as follows :
+					1. Amount of Loan should not be more than 15 lakhs.
+					2. Repayment period should be between 7 yrs to 15 yrs.
+-->
+
+<html>
+	<head>
+		
+		<script>
+				function validateInformation() {
+					var loanAmount = document.getElementById("amount").value;
+					var roi = document.getElementById("roi").value;
+					var period = document.getElementById("time").value;
+					
+					if(loanAmount <= 0 || roi <= 0 || period <= 0) {
+						alert("Fields cannot be negative or empty");
+						return false;
+					}
+					
+					if(isNaN(loanAmount) || isNaN(roi) || isNaN(period)) {
+						alert("Please fill in a valid number");
+						return false;
+					}
+					
+					if(loanAmount > 1500000) {
+						alert("Amount of Loan should not be more than 15 lakhs");
+						document.getElementById("amount").focus();
+						document.getElementById("amount").select();
+						return false;
+					}
+					
+					if(period < 7 || period > 15) {
+						alert("Repayment period should be between 7 yrs to 15 yrs");
+						document.getElementById("time").focus();
+						document.getElementById("time").select();
+						return false;
+					}
+					
+					calculatePayment();
+				}
+			
+				function calculatePayment() {
+					var loanAmount = parseInt(document.getElementById("amount").value);
+					var roi = document.getElementById("roi").value;
+					var period = document.getElementById("time").value;
+					
+					var interest = loanAmount * (roi/100) * period;
+					
+					document.getElementById("monthlyAmount").value = loanAmount * (roi/1200);
+					document.getElementById("interest").value = interest;
+					document.getElementById("totalAmount").value = loanAmount + interest;
+				}
+		</script>	
+		
+	</head>
+
+	<body>
+		<h3>Enter Loan Information:</h3>
+		<ol>
+			<li>Amount of the loan (any currency): <input type="text" id="amount"></li>
+			<li>Annual Percentage Rate of Interest: <input type="text" id="roi"> </li>
+			<li>Repayment period in years: <input type="text" id="time"></li><br>
+			
+			<input type="button" value="Compute" onclick="validateInformation()"><br>
+			
+			<h3>Payment Information</h3>
+			
+			<li>Your Monthly Payment will be: <input type="number" id="monthlyAmount" readonly></li>
+			<li>Your Total Payment will be: <input type="number" id="totalAmount" readonly></li>
+			<li>Your Total interest payments will be: <input type="number" id="interest" readonly></li>
+			
+		</ol>
+		
+		
+	</body>
+</html>

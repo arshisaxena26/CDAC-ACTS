@@ -1,0 +1,43 @@
+<!-- Question : Create a HTML form that accepts start and end values and displays multiplication table.
+-->
+
+<html>
+	<head>
+		
+		<script>
+				function multiplication() {
+					var startNum = document.getElementById("startNum").value;
+					var endNum = document.getElementById("endNum").value;
+					var factor = document.getElementById("factor").value;
+					
+					for(i = startNum; i <= endNum; i++) {
+						document.getElementById("table").innerHTML += i + " times " + factor + " = " + i * factor + "\n";
+					}
+				}
+		</script>	
+		
+	</head>
+
+	<body>
+		
+		<form>
+			
+			Start Number : <input type="number" id="startNum">
+			End Number : <input type="number" id="endNum">
+			Multiply By : <input type="number" id="factor">
+				
+			<br><br>
+
+			<input type="button" value="Times Table" onclick="multiplication()">
+
+			<br><br>
+			
+			<input type="reset" value="Reset">
+
+			<br><br>
+
+			<textarea id="table" rows=10 cols=150> </textarea>
+		</form>
+		
+	</body>
+</html>

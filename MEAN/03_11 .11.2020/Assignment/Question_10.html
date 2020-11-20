@@ -1,0 +1,98 @@
+<!-- Question : Create a HTML page that will display a form and on clicking the button, the details will be listed. 
+				 Also create an object with all details from form, show them in new window through the newly created object.
+				 The following requirements must be met:
+				
+				 Name: Required, only alphabets allowed, maximum length is 10.
+				 Lucky number: Required, must be of 4 digits.
+				 All other fields are mandatory
+				 Display appropriate messages in case of invalid data.
+-->
+
+<html>
+	<head>
+		
+		<script>
+			
+			function validate() {
+				var regexp_name =/^[a-zA-Z]{1,10}$/;
+				var regexp_num = /\d{4}/;
+				
+				var name = document.getElementById("name").value;
+				var dob = document.getElementById("dob").value;
+				var email = document.getElementById("email").value;
+				var num = document.getElementById("num").value;
+				
+				var gender = document.getElementsByName("gender");
+				var genderValue;
+				
+				for(i=0;i<gender.length;i++){
+					if(gender[i].checked)
+						genderValue = gender[i].value;
+				}
+				
+				var food = document.getElementsByName("food");
+				var foodValue="";
+				
+				for(i=0;i<food.length;i++){
+					if(food[i].checked)
+						foodValue += food[i].value + ",";
+				}
+				
+				if(dob == "" || email == "" || genderValue == undefined || foodValue == "") {
+					alert("All Fields are Mandatory");
+					return false;
+				}
+				
+				if(!(regexp_name.test(name))){
+					alert("Name: Required, only alphabets allowed, maximum length is 10");
+					document.getElementById("name").focus();
+					document.getElementById("name").select();
+					return false;
+				}
+				
+				if(!(regexp_num.test(num))){
+					alert("Lucky number: Required, must be of 4 digits");
+					document.getElementById("num").focus();
+					document.getElementById("num").select();
+					return false;
+				}
+				
+				var User = {
+					userName:name,
+					dateOfBirth:dob,
+					userEmail:email,
+					userGender:genderValue,
+					luckyNumber:num,
+					favFood:foodValue
+				};
+				
+				var myWindow = window.open("", "User Details", "width=1200,height=1100");
+				myWindow.document.write("You Entered: <br>");
+				myWindow.document.write("Name: " + User.userName + "<br>");
+				myWindow.document.write("Birth Date: " + User.dateOfBirth + "<br>");
+				myWindow.document.write("Email Address: " + User.userEmail + "<br>");
+				myWindow.document.write("Gender: " + User.userGender + "<br>");
+				myWindow.document.write("Lucky Number: " + User.luckyNumber + "<br>");
+				myWindow.document.write("Favorite Food: " + User.favFood + "<br>");
+				
+			}
+			
+		</script>	
+		
+	</head>
+
+	<body>
+		Name: <input type="text" id="name"><br><br>
+		Birth Date: <input type="date" id="dob"><br><br>
+		Email Address: <input type="email" id="email"><br><br>
+		Gender : <input type="radio" name="gender" value="Male"> Male
+				 <input type="radio" name="gender" value="Female"> Female <br><br>
+		Lucky Number: <input type="number" id="num"><br><br>
+		Favorite Foods: <input type="checkbox" name="food" value="Pizza"> Pizza
+						<input type="checkbox" name="food" value="Pasta"> Pasta
+						<input type="checkbox" name="food" value="Burgers"> Burgers 
+		<br><br><br>
+		<input type="button" value="Send Data" onclick="validate()">
+
+	</body>
+</html>

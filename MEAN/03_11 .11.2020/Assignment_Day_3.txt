@@ -1,0 +1,66 @@
+Javascript Lab Assignments:
+
+Day-3 :
+
+Q1. Create a HTML form that accepts start and end values and displays multiplication table.
+
+Q2. Create a HTML acccepting inputs of "String", "Substring" and "Replace with String" from User. 
+    Use JS to manipulate strings. Display the output below the button.
+	1st radio button : search the given sub string (second text box) in main string (first text box)
+	2nd & 3rd radio button: convert one of the strings to upper/lower case
+	4th radio button : trim spaces around first string
+	5th radio button : concatenate strings in first and 2nd text boxes
+	6th radio button : Replace with given string
+
+Q3. Write a program that accepts (from the html form) a positive integer less than 1000 and prints out the sum of the digits of this number.
+	Enter a +ve no less than 1000: -4
+	Entered number is out of range
+	Enter a +ve no less than 1000: 1234
+	Entered number is out of range
+	Enter a +ve no less than 1000: 546
+	Sum of the digits of 546 is 15
+
+Q4. Assume I have an array of member names. Read the array and display all member names as a string delimited by comma all in uppercase.
+
+Q5. Assume we have this content in HTML <body>
+	<body>
+	<h3> Members of my Group are </h3>
+	<ol id="list">
+	</ol>
+	</body>
+   Also assume we have a array of person names (5 names).
+   Read from array and populate the above list with member names in bullet form.
+
+Q6.Consider a HTML document made of multiple divs. Search all divs that contain the string “training”.
+
+Q7.Payment calculator: 
+	Create a web page and calculate Payment Information based on Loan Information.
+	Validate Loan information textfields for numbers and Payment Information textfields should be uneditable. 
+	The other constraints are as follows :
+		1. Amount of Loan should not be more than 15 lakhs.
+		2. Repayment period should be between 7 yrs to 15 yrs.
+		
+Q8. Create a Login.html page that accepts username and password. 
+    Following are the validations required:
+	1. Both fields are mandatory
+	2. Username must be between 6 to 10 characters, all alphabetic.
+	3. Password should be greater than 8 characters, must contain a # and atleast one digit.
+
+Q9. Create a HTML page that accepts order details:
+    Following are validations required:
+	1. All fields are mandatory
+	2. Customer name must be greater than 5 characters.
+	3. Billing date must be lesser than shipping date.
+	
+    On clicking the display button, all form information must be saved into an Order object. 
+    The details of this object must be displayed in a new window in a neat tabular fashion(hint : use window.open())
+    
+Q10. Create a HTML page that will display a form and on clicking the button, the details will be listed. 
+     Also create an object with all details from form, show them in new window through the newly created object.
+
+     The following requirements must be met:
+	 Name: Required, only alphabets allowed, maximum length is 10.
+	 Lucky number: Required, must be of 4 digits.
+	 All other fields are mandatory
+	 Display appropriate messages in case of invalid data.
+    	

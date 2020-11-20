@@ -1,0 +1,85 @@
+<!-- Question : Create a HTML page that accepts order details:
+				Following are validations required:
+					1. All fields are mandatory
+					2. Customer name must be greater than 5 characters.
+					3. Billing date must be lesser than shipping date.
+
+				On clicking the display button, all form information must be saved into an Order object. 
+				The details of this object must be displayed in a new window in a neat tabular fashion(hint : use window.open())
+-->
+
+<html>
+	<head>
+		
+		<script>
+			
+			function validate() {
+				
+				var id = document.getElementById("id").value;
+				var name = document.getElementById("name").value;
+				var billDate = document.getElementById("billDate").value;
+				var shipDate = document.getElementById("shipDate").value;
+				var total = document.getElementById("total").value;
+				
+				if(id == 0 || name == "" || billDate == "" || shipDate == "" || total == 0){
+					alert("All Fields are Mandatory");
+					return false;
+				}
+				
+				if(name <= 5){
+					alert("Customer name must be greater than 5 characters");
+					document.getElementById("name").focus();
+					document.getElementById("name").select();
+					return false;
+				}
+				
+				if(billDate > shipDate){
+					alert("Billing date must be lesser than shipping date");
+					document.getElementById("billDate").focus();
+					document.getElementById("billDate").select();
+					return false;
+				}
+				
+				display();
+			}
+			
+			
+			function display() {
+				
+				var id = document.getElementById("id").value;
+				var name = document.getElementById("name").value;
+				var billDate = document.getElementById("billDate").value;
+				var shipDate = document.getElementById("shipDate").value;
+				var total = document.getElementById("total").value;
+				
+				var Order = {
+					custId: id,
+					custName:name,
+					billingDate:billDate,
+					shippingDate:shipDate,
+					orderTotal:total,
+				};
+				
+				var myWindow = window.open("", "Order Details", "width=1200,height=1100");
+				myWindow.document.write("Order ID : " + Order.custId + "<br>");
+				myWindow.document.write("Customer Name : " + Order.custName + "<br>");
+				myWindow.document.write("Billing Date : " + Order.billingDate + "<br>");
+				myWindow.document.write("Shipping Date : " + Order.shippingDate + "<br>");
+				myWindow.document.write("Order Total : " + Order.orderTotal + "<br>");
+			}
+				
+		</script>	
+		
+	</head>
+
+	<body>
+		
+		Order ID : <input type="number" id="id"><br><br>
+		Customer Name : <input type="text" id="name"><br><br>
+		Enter Billing Date :<input type="date" id="billDate"><br><br>
+		Enter Shipping Date : <input type="date" id="shipDate"><br><br>
+		Order Total : <input type="number" id="total"><br><br>
+		<input type="button" value="display" onclick="validate()">
+		
+	</body>
+</html>

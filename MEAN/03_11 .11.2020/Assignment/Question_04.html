@@ -1,0 +1,20 @@
+<!-- Question : Assume I have an array of member names. Read the array and display all member names as a string delimited by comma all in uppercase.
+-->
+
+<html>
+	<head>
+	</head>
+
+	<body>
+		<script>
+				var memberNames = ["Rob","Bob","Toby","Ron","John","Ross","Grace"];
+				var str = "Member Names : ";
+			
+				for(i=0;i<memberNames.length;i++){
+					str += memberNames[i].toUpperCase() + ",";
+				}
+				
+				document.write(str);
+		</script>
+	</body>
+</html>

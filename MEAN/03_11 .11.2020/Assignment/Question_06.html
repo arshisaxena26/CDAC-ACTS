@@ -1,0 +1,37 @@
+<!-- Question : Consider a HTML document made of multiple divs. Search all divs that contain the string “training”.
+-->
+
+<html>
+	<head>
+		
+		<script>
+				function search() {
+					var tags = document.getElementsByTagName("DIV");
+					
+					for (i = 0; i < tags.length; i++) {
+						
+						if(tags[i].innerText.includes("Training"))
+							tags[i].style.backgroundColor = "yellow";
+					}
+				}
+					
+		</script>	
+		
+	</head>
+
+	<body>
+		
+		<div> Orientation </div><br>
+		
+		<div> Safety Training </div><br>
+		
+		<div> Quality Training </div><br>
+		
+		<div> Team Training </div><br>
+		
+		<div> Onboarding </div><br>
+		
+		<input type="button" value="Search" onclick="search()">
+		
+	</body>
+</html>

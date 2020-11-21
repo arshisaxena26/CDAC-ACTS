@@ -1,0 +1,46 @@
+Typescript Lab Assignments:
+
+Day-4 :
+
+Q1. Write a typescript program to find sum of digits of given five-digit number.
+
+Q2. Write a function pow(x,y) that calculates x^y. Do not use the Math predefined object.
+
+Q3. Write a function to find the sum of squares of even numbers upto N. 
+    N is passed as argument to typescript function.
+
+Q4. Write a typescript file that has a function that accepts an array of numbers.
+    The function must loop through array, find the min and max element in the array.
+    It must also find the average of all elements in the array. Display all values in function only.
+
+Q5. Write a typescript file that has a function that accepts a array of numbers.
+    The function must loop through array, find square of each element and return the array with new elements.
+	var squareArray = arraySquare(original-array);
+
+Q6. Write a typescript file that has a function strJoin(). 
+    This function must take first argument as separator and any number of subsequent string arguments.
+    The function must sort the input strings and then return a string that is a concatenated string, 
+    with each input string separated by separator.
+	eg : strJoin(“#”,”Soha”,”Shrilata”,” Sarita”) returns Sarita#Shrilata#Soha
+
+Q7. Write a typescript function that takes variable array of strings. The array holds many web site names. 
+    Eg, www.google.com, www.msn.com, www.amazon.co.in, in.answers.yahoo.com, en.m.wikipedia.com, codehs.gitbooks.io, www.coderanch.com 	  etc. 
+    Search for all sites that begin with “www” and display the total number of such sites. Eg for above eg, total is 4.
+
+Q8. Write a TypeScipt class Product that has Product-id, Product-name and product-price.
+	printProduct() should print product details.
+
+Q9. Create a class Products that will have an array of Product objects. 
+    printAllProducts() must iterate through array and print out all products.
+    
+Q10. Create Employee class module and organization class module. Create a main.ts import both modules in main.ts
+
+	a)Implement function to find total no of employees in main.ts
+	b)Display information organization
+	c)Store employee objects in array
+	d)Implement Employee search function to find employee and display all his details
+	
+Note:Employee(Name,id,address,phone,email),Organization(name,registration_id,address).
+
+
+

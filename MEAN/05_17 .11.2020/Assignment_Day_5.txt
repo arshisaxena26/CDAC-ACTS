@@ -1,0 +1,39 @@
+JQuery Lab Assignments:
+
+Day-5 :
+
+Q1. Find all h1 elements that are children of a div element and apply a background to them.
+    Sample Data :
+	<body>
+		<h1>abc</h1>
+		<div id=”div1”>
+			<h1>div-1</h1>
+			<h1>div-2</h1>
+		</div>
+		<h1>xyz</h1>
+	</body>
+
+Q2. Set the background color of a page to lightblue.
+
+Q3. Use the sample data in question1. Change background color of div to green.
+
+Q4. Change the text in the span, which is a child of '#target'.
+
+Q5. Change background color of the second 'div’.
+
+Q6. Hide all the input elements within a form. You may use one of the web page created in HTML lab.
+
+Q7. Find the specific option tag text value of a given option. 
+	For eg, show the text value associated with second option.
+
+Q8. Write jQuery code to append a div element (and all of its contents) dynamically to the body element.
+	Insert the following code within HTML <body> tag : <div><h1>JQuery Core</h1></div>
+
+Q9. Write a jQuery Code to get a single element (li) from a list. Sample data: second list item is “Kiwi”.
+	<body>
+		<ui>
+			<li>Apple</li>
+			<li>Kiwi</li>
+			<li>Strawberry</li>
+	</body>
+

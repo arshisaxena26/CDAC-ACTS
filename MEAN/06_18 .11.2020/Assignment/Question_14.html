@@ -13,10 +13,9 @@
     <script>
         $(() => {
             $("button:last").click(function () {
-                var str = document.getElementById("search").value;
 
                 $("td").each(function () {
-                    if ($(this).text().includes(str))
+                    if ($(this).text().includes($("#search").val()))
                         $(this).css("background-color", "gold");
                 });
             });

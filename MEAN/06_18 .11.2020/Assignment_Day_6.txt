@@ -1,0 +1,70 @@
+JQuery Lab Assignments:
+
+Day-6 :
+
+Q1. Given the above list, prepend each list item with a index number. Eg, display should be:
+	0:Apple
+	1:Kiwi
+	2:Strawberry
+
+Q2. Write jQuery Code to change the hyperlink and the text of a existing link. Eg, given this code
+	<a href="www.mysite.com/jquery/" id='tut'>jquery Tutorial</a>, change the href and anchor text
+
+Q3. Assume a webpage having 2 paragraphs. There are 2 styles defined. 
+    Apply one style each to each of the paras. Eg, style1 to para1 and style2 to para2
+
+Q4. Assume a web page having 3 divs, one of them having a class applied. 
+    Find which div element has class applied. 
+    Sample data: (output would be div1)
+	<body>
+		<div id="div1" class="divclass"></div>
+		<div id="div2" </div>
+		<div id="div3" </div>
+	</body>
+
+Q5. Assume we have this content in HTML <body>
+	<body>
+		<h3> Members of my Group are </h3>
+		<ol id="list">
+		</ol>
+	</body>
+   Also assume we have a array of person names (5 names).
+   Read from array and populate the above list with member names in bullet form.	
+
+Q6. Assume I have an array of member names. 
+    Read the array and display all member names as a string delimited by comma all in uppercase.
+
+Q7. Create a web page that accepts person name, age and whether employed (true/false) using HTML form elements.
+    On clicking “add” button, create a JSON obj with the person details. Add (push()) this json into an array.
+    Provide another button “display” which will iterate thru array and display all persons details in a neat HTML table.
+
+Q8. Assume i have 4 div element all in different colors:
+	<div style="background: #229; height: 100px; width: 100px"></div>
+	<div style="background: #235; height: 100px; width: 100px"></div>
+	<div style="background: #275; height: 100px; width: 100px"></div>
+	<div style="background: #245; height: 100px; width: 100px"></div>
+    Clicking on any div element must hide it. Write appropriate jquery code.	
+
+Q9. Create a animation that moves a image. 
+    On click of a button, the image should first move towards right, then drop down a little and 
+    finally show image larger than its original dimensions, applying a border at the same time.
+    
+Q10. Given the following list and button:
+	<ul>
+	<li>Marketing</li>
+	<li>Sales</li>
+	<li>Technology</li>
+	<li>Customer Support</li></ul>
+	<input id="btnTestIt" type="button" value="Test It">
+On clicking button, change the background color and draw the border around the <ul> element.
+
+Q11. Create a form that accepts department name. There are 2 buttons:
+     On click of “select” button, it must highlight the dept-name in the list of departments.
+     On click of “add” button, it must append new department to existing list of departments.    
+
+Q12. Create a HTML page that displays a list of employees and details. On click of button, apply zebra stripes.
+
+Q13. Given a list of items, on button click select first child and 3rd child respectively.
+
+Q14. Given the following table. Provide a text field to search and a button. 
+     On button click, search for the name in the table.

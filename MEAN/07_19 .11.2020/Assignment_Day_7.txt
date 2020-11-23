@@ -1,0 +1,30 @@
+Angular Lab Assignments:
+
+Day-7 :
+
+Q1. Create an Angular application that display static content – “about us” (that will display some data) 
+    and “contact us” (that will display some other data). 
+    Both these contents must come from two different components.
+
+Q2. Create a component people-list. 
+    The component class must have a property “people” which is an array of json objects. 
+    Each person must be described using name, age and gender. 
+    The component must display all people details in a tabular manner. The array can be created as:
+    	
+    	people:any[] = [
+		{"name":"Ria","age":23,"gender":"female"},
+		{"name":"Dia","age":27,"gender":"female"},
+		{"name":"Anish","age":20,"gender":"male"}
+	];
+	
+    Output to be displayed in a table.
+    
+Q3. Create a module “Module1.ts” having two classes:
+
+	1) a class “People” with properties “name”, “age” and “gender”.
+	2) A class “Module” that exports a people array having people instances.
+	
+    In the people-list component, create Module1 instance and a method getAllPeople() that retrieves all people instances. 
+    Display these people instances in neat tabular fashion. Use bootstrap classes for table.
+
+

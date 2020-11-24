@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<br>
+
+Book Name : <input type="text" [(ngModel)]="name"><br><br>
+
+Author : <input type="text" [(ngModel)]="author"><br><br>
+
+Publication House :
+<select [(ngModel)]="publicationHouse">
+    <option *ngFor="let item of publicationHouses">{{item}}</option>
+</select><br><br>
+
+Price : <input type="text" [(ngModel)]="price"><br><br>
+
+<input type="button" value="Submit" (click)="storeBook()"><br><br>
+
+<table *ngIf="visible" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Publication House</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of books">
+            <td>{{item.name}}</td>
+            <td>{{item.author}}</td>
+            <td>{{item.publicationHouse}}</td>
+            <td>{{item.price | currency:'USD'}}</td>
+        </tr>
+    </tbody>
+</table>

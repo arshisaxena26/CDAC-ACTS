@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+Employee ID : <input type="number" [(ngModel)]="empNo"><br><br>
+Employee Name : <input type="text" [(ngModel)]="empName"><br><br>
+Employee Salary : <input type="number" [(ngModel)]="salary"><br><br>
+Employee Designation : <input type="text" [(ngModel)]="designation"><br><br>
+<input type="button" value="Add" (click)="add()"><br>
+<input type="button" value="Display Table" (click)="showTable()">
+<input type="button" value="Display List" (click)="showList()">
+<input type="reset" value="Clear Form" (click)="clearForm()"><br><br>
+
+
+<table class="table table-bordered" *ngIf="tableVisible">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Designation</th>
+            <th>Bonus</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeesArray">
+            <td>{{emp.empNo}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.salary}}</td>
+            <td>{{emp.designation}}</td>
+            <td>{{emp.salary * 0.1}}</td>
+            <td>{{emp.salary + emp.salary*0.1}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ol *ngIf="listVisible">
+    <li *ngFor="let emp of employeesArray">
+        {{emp.empNo}}-{{emp.empName}}-{{emp.salary}}-{{emp.designation}}-{{emp.salary * 0.1}}-{{emp.salary + emp.salary*0.1}}
+    </li>
+</ol>

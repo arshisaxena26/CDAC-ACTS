@@ -13,7 +13,7 @@ export class EmployeeDetailsComponent {
   salary: number = 0;
   designation: string = "";
   employeesArray: Employee[] = [];
-  employee;
+  employee = new Employee(this.empNo, this.empName, this.salary, this.designation);
   tableVisible = false;
   listVisible = false;
 
@@ -45,8 +45,6 @@ export class EmployeeDetailsComponent {
         designation: "Marketing Head"
       }
     ];
-
-    this.employee = new Employee(this.empNo, this.empName, this.salary, this.designation);
   }
 
   add() {

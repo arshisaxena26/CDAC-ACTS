@@ -1,0 +1,18 @@
+Angular Lab Assignments:
+
+Day-8 :
+
+Q1. Two-way data binding: Create a Angular application that accepts Order details and displays them.
+
+Q2. Design a array of employees to store empno,ename,salary,desg. Store 4 objects in the array.
+    On top of table display three buttons – “display table”, “display list”, “clear form”. 
+    And on click of button either table will be displayed or list will be displayed. 
+    After clicking on “clear form”, form should get cleared and data below form should be hidden.
+
+    Display data in table : empno,ename,salary,desg,bonus,total
+    Below table display it in ordered list : empno--->ename---> salary--->bonus--->total
+    
+    To calculate bonus : bonus=10% salary ,total=bonus+salary.
+    
+
+

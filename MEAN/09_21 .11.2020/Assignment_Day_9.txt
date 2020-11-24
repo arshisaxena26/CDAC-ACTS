@@ -1,0 +1,23 @@
+Angular Lab Assignments:
+
+Day-9 :
+
+Q1. Create a simple HTML form that accepts book details – bookname, author, publication-house and price. 
+    The publication-house must be a dropdown list with values dynamically retrieved from BookService say some method getPubHouses(). 
+    Store the submitted form containing book details into an array in a BookService using some method like storeBook(Bookobj)
+    Create a simple service, not using HTTP.
+
+Q2. Create a simple HTML form for User login. 
+    Component should retrieve these values and ask a LoginService to authenticate the user.
+
+Q3. Create a routing application that displays students list (/students) and course list (“/courses”) during navigation. 
+    For retrieving students list use simple service that retrieves data from a hardcoded json file. 
+    For displaying course list, create a appropriate REST example using Spring/Boot.
+
+Q4. Create a CalculatorService that provides the following methods: 
+	subtract(a,b), multiply(a,b), divide(a,b), square(a), factorial(num), sum(a,b,c...) where sum() uses rest parameters. 
+    Test this service using test component. The html in test component must accept data in simple text fields.
+    Provide buttons to call each of the methods. For sum(), in HTML, pass all numbers as comma separated string in a text field.
+    
+
+

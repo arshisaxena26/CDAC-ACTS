@@ -1,0 +1,12 @@
+Order ID: <input type="number" [(ngModel)]="id"><br><br>
+Customer Name: <input type="text" [(ngModel)]="name"><br><br>
+Enter Billing Date: <input type="date" [(ngModel)]="billingDate"><br><br>
+Enter Shipping Date: <input type="date" [(ngModel)]="shippingDate"><br><br>
+Order Total: <input type="number" [(ngModel)]="total"><br>
+<br>
+<hr>
+<p *ngIf="id!=0">Order ID : {{id}} </p>
+<p *ngIf="name!=''">Customer Name : {{name}} </p>
+<p *ngIf="billingDate!=''">Billing Date : {{billingDate}} </p>
+<p *ngIf="shippingDate!=''">Shipping Date : {{shippingDate}}</p>
+<p *ngIf="total!=0">Order Total : {{total|currency:'USD'}} </p>

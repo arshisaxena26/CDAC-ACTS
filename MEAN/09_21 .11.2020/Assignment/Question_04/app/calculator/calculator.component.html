@@ -1,0 +1,19 @@
+Enter First Number : <input type="number" [(ngModel)]="firstNum"><br><br>
+Enter Second Number : <input type="number" [(ngModel)]="secNum"><br><br>
+<input type="button" value="Subtract" (click)="subtract()">
+<input type="button" value="Multiply" (click)="multiply()">
+<input type="button" value="Divide" (click)="divide()"><br><br>
+
+Enter a Number : <input type="number" [(ngModel)]="singleNum"><br><br>
+<input type="button" value="Square" (click)="square()">
+<input type="button" value="Factorial" (click)="factorial()"><br><br>
+
+Enter Comma Separated Numbers : <input type="text" [(ngModel)]="numString"><br><br>
+<input type="button" value="Sum" (click)="sum()"><br>
+
+<p>Subtraction : {{sub}}</p>
+<p>Multiplication : {{mul}}</p>
+<p>Division : {{div}}</p>
+<p>Square : {{sq}}</p>
+<p>Factorial : {{fact}}</p>
+<p>Sum : {{sumValue}}</p>

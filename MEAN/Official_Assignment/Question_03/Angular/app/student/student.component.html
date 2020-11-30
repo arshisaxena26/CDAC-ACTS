@@ -1,14 +1,30 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <br>
 <form novalidate #newStudent="ngForm" (ngSubmit)="addStudent(newStudent)">
-    Name : <input type="text" name="name" ngmodel><br><br>
-    Email : <input type="email" name="email" ngmodel><br><br>
-    Course : <input type="text" name="course" ngmodel><br><br>
-    CGPA : <input type="number" name="cgpa" ngmodel><br><br>
-    <input type="submit" value="Add Student">
+    Name : <input type="text" name="name" ngmodel #name="ngmodel" required minlength="2" pattern="^[a-zA-Z ]+$">
+    <div *ngIf="!name?.valid && (name?.dirty || name?.touched)">
+        Invalid Name
+    </div><br><br>
+
+    Email : <input type="email" name="email" ngmodel required #email="ngmodel">
+    <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+        Invalid Email
+    </div><br><br>
+
+    Course : <input type="text" name="course" ngmodel required #course="ngmodel">
+    <div *ngIf="!course?.valid && (course?.dirty || course?.touched)">
+        Course Cannot be Empty
+    </div><br><br>
+
+    CGPA : <input type="number" name="cgpa" ngmodel required #cgpa="ngmodel">
+    <div *ngIf="!cgpa?.valid && (cgpa?.dirty || cgpa?.touched)">
+        CGPA Cannot be Empty
+    </div><br><br>
+
+    <input type="submit" value="Add Student" [disabled]="!newStudent.valid">
 </form><br>
 
-Student ID: <input #studentId type="text"><br><br>
+Student ID: <input #studentId type="text" required><br><br>
 <input type="button" value="Get Student" (click)="getStudentDetails(studentId.value)"><br><br>
 <input type="button" value="Get All Students" (click)="getAllStudents()"><br><br>
 
@@ -53,5 +69,3 @@ Student ID: <input #studentId type="text"><br><br>
         </tr>
     </tbody>
 </table>
-
-{{student|json}}

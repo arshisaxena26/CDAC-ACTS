@@ -1,0 +1,10 @@
+insert into students values(default,8,"Angular","rob@gmail.com","Rob Johnson");
+insert into students values(default,9,"Spring","john@gmail.com","John Gettleman");
+insert into students values(default,7,"jQuery","mark@gmail.com","Mark Stevenson");
+insert into students values(default,6,"TypeScript","bob@gmail.com","Bob Goldman");
+insert into students values(default,4,"JavaScript","grace@gmail.com","Grace Watson");
+insert into students values(default,5,"Spring Boot","stacy@gmail.com","Stacy Miller");
+insert into students values(default,6,"Hibernate","hannah@gmail.com","Hannah Green");
+insert into students values(default,8,"Express","emily@gmail.com","Emily Baker");
+insert into students values(default,9,"NodeJS","emma@gmail.com","Emma Bell");
+insert into students values(default,10,"MongoDB","hailey@gmail.com","Hailey Allen");

@@ -1,0 +1,28 @@
+MEANSTACK - Assignment
+
+jQuery assignment:
+
+	1. Create a HTML with data in fields that behave like placeholders. But they ARE NOT HTML5 placeholders!
+	   When user begins entering text in text field, the watermark must go away.
+	   
+	2. Create a jQuery webpage which accepts Shipping address and billing address from the user. 
+	   If the billing address and shipping address were same copy the shipping address details to 
+	   billing address and make it readonly.
+
+Angular Assignment :
+
+	Create a StudentService component that will perform the following operations:
+	
+		• getStudentDetails(int studId) – given studentId, fetch details of that student
+		• getAllStudents() – fetch all students information
+		• addStudent() – add a new student to server side
+		
+	The service component will fetch and store data to and from a RestFul Web service which you have already created in SpringBoot.
+	Don’t create these services. I am assuming that all these services are up and running.
+	
+	Create a Angular component that displays a HTML template-driven form to accept student information. 
+	Validate the information and store the student object to server side database using the studentService component 
+	(use Http.post() method).
+	
+	Use the StudentService component again to fetch single student info and all students info. 
+	Display the fetched details in neat fashion.

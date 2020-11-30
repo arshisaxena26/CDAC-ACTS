@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<br>
+<form novalidate #newStudent="ngForm" (ngSubmit)="addStudent(newStudent)">
+    Name : <input type="text" name="name" ngmodel><br><br>
+    Email : <input type="text" name="email" ngmodel><br><br>
+    Course : <input type="text" name="course" ngmodel><br><br>
+    CGPA : <input type="number" name="cgpa" ngmodel><br><br>
+    <input type="submit" value="Add Student">
+</form><br>
+
+Student ID: <input type="number" [(ngmodel)]="studentId"><br><br>
+<input type="button" value="Get Student" (click)="getStudentDetails()"><br><br>
+<input type="button" value="Get All Students" (click)="getAllStudents()"><br><br>
+
+<table class="table table-bordered" *ngIf="showAllStudentsTable">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>CGPA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let items of students">
+            <td>{{items.studentId}}</td>
+            <td>{{items.name}}</td>
+            <td>{{items.email}}</td>
+            <td>{{items.course}}</td>
+            <td>{{items.cgpa}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered" *ngIf="showOneStudentTable">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>CGPA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{student.studentId}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.course}}</td>
+            <td>{{student.cgpa}}</td>
+        </tr>
+    </tbody>
+</table>
+
+{{student|json}}

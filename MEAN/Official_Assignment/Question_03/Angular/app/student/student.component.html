@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <br>
 <form novalidate #newStudent="ngForm" (ngSubmit)="addStudent(newStudent)">
-    Name : <input type="text" name="name" ngmodel #name="ngmodel" required minlength="2" pattern="^[a-zA-Z ]+$">
+    Name : <input type="text" name="name" ngModel #name="ngModel" required minlength="2" pattern="^[a-zA-Z ]+$">
     <div *ngIf="!name?.valid && (name?.dirty || name?.touched)">
         Invalid Name
     </div><br><br>
 
-    Email : <input type="email" name="email" ngmodel required #email="ngmodel">
+    Email : <input type="text" name="email" ngModel required #email="ngModel" email>
     <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
         Invalid Email
     </div><br><br>
 
-    Course : <input type="text" name="course" ngmodel required #course="ngmodel">
+    Course : <input type="text" name="course" ngModel required #course="ngModel">
     <div *ngIf="!course?.valid && (course?.dirty || course?.touched)">
         Course Cannot be Empty
     </div><br><br>
 
-    CGPA : <input type="number" name="cgpa" ngmodel required #cgpa="ngmodel">
+    CGPA : <input type="number" name="cgpa" ngModel required #cgpa="ngModel">
     <div *ngIf="!cgpa?.valid && (cgpa?.dirty || cgpa?.touched)">
         CGPA Cannot be Empty
     </div><br><br>

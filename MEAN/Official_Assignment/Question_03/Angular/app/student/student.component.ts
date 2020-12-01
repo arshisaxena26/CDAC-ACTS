@@ -17,8 +17,7 @@ export class StudentComponent {
   constructor(private studentservice: StudentService) { }
 
   addStudent(newStudent: NgForm) {
-    this.student = newStudent.value;
-    this.studentservice.addStudent(this.student).subscribe(res => {
+    this.studentservice.addStudent(newStudent.value).subscribe(res => {
       console.log(res);
     });
 

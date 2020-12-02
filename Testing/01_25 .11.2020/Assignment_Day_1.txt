@@ -1,0 +1,10 @@
+Assignment Question:
+
+1. Write test cases for the following classes and execute the test to confirm the validity of the code.
+
+    a. ConDeveloper.java
+    b. OfficeAssitant.java
+
+2. You may want to look at the complete hierarchy before starting the Test planning.
+
+3. All methods of the two classes need to be tested for all possible permutations.

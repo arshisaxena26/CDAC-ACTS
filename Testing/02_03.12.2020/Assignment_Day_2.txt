@@ -1,0 +1,7 @@
+Assignment Questions:
+
+Q1. Use Selenium to test an existing Spring MVC Application (Flight Reservation System).
+
+Q2. Use Selenium to create a user on Facebook and try to login using the forgot password link.
+
+

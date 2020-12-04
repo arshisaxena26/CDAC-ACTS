@@ -1,0 +1,12 @@
+C# Assignment Questions :
+
+1. Create your own class like the Array class and implement methods that:
+	a. Sort an array using bubble-sort, quicksort
+		*Bonus question: What is the complexity of bubble-sort and quicksort?
+	b. Implement linear search on an array.
+		*Bonus question: What is the complexity of linear search?
+	 c. Implement a binary search algorithm on an array (both iterative and recursive) 
+		*Bonus question: what is the complexity of the binary search algorithm for iterative and recursive versions?
+	
+**NOTE: Don't copy the implementation from elsewhere. Try implementing on your own.
+Run your implemented algorithms through the debugger to understand how they are working.

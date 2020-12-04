@@ -1,0 +1,19 @@
+C# Assignment Questions : 
+  
+1. Implement a Calculator Program using Class Library. Read inputs from Console. 
+   Display proper message for SQRT of negative numbers(instead of showing NaN).
+   
+   Optional: Ask for required operation from console e.g. ADD, SUB, MUL, etc.
+   
+   **NOTE: Implement a Menu Driven Program.
+
+2. Given a String Date representing a Gregorian Calendar date formatted as “YYYY-MM-DD”.
+   Return the day Number of the Year.
+        
+        e.g.
+	Input: date = “2019-01-09”
+	Output: 9 → Meaning given date is the 9th day of the year 2019.
+	
+	e.g.
+	Input: date = “2019-02-10”
+	Output: 41 → Meaning given date is the 41st day of the year 2019.

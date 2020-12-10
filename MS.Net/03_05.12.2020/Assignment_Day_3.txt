@@ -18,7 +18,6 @@ C# Assignment Questions:
     a. At what point in time was the temperature lowest.
     b. At what point in time was the temperature highest.
     c. What was the avg temperature recorded.
-	
 
 3. Attached is a zip containing html files each one containing the most popular baby names in the US, year-wise and ranked. 
    Using regex, perform the following operations:

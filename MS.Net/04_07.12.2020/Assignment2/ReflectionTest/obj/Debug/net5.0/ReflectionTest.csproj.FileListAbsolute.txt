@@ -1,0 +1,16 @@
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.csprojAssemblyReference.cache
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.AssemblyInfoInputs.cache
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.AssemblyInfo.cs
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.csproj.CoreCompileInputs.cache
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest.deps.json
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest.runtimeconfig.json
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest.runtimeconfig.dev.json
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest.dll
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ref/ReflectionTest.dll
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/bin/Debug/net5.0/ReflectionTest.pdb
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.dll
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ref/ReflectionTest.dll
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.pdb
+/home/arshi/vscode_workspace/MS_DotNet/C#/Day4/Assignment2/ReflectionTest/obj/Debug/net5.0/ReflectionTest.genruntimeconfig.cache

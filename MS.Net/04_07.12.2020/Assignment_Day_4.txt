@@ -1,0 +1,11 @@
+C# Assignment Questions:     
+    
+Q1. WPF assignment: 
+
+    Create a simple calculator in WPF.
+     
+    Use the appropriate layout to arrange the buttons in a nice matrix like fashion and display the result of the 
+    calculation in a read-only text box above the buttons.
+
+Q2. Using reflection, create an instance of a class having a private constructor.
+

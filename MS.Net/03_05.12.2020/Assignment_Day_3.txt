@@ -1,0 +1,48 @@
+C# Assignment Questions:     
+    
+1. Implement a generic hashmap (also called as dictionary) in C#. 
+   Use any one strategy to handle collisions: chaining or open addressing.
+
+*Bonus: try implementing both the collision strategies.
+*Bonus: What is the complexity of insert/delete operations and what is the space complexity?
+
+**NOTE: Use exception handling for operations that might fail like out of capacity in your hashmap.
+
+
+
+2. Assume you are implementing a temperature checker program. At periodic time intervals, 
+   you should get a notification (use a delegate) that contains the temperature recorded and the time at which it was recorded. 
+   Store the temperature and time values, that you receive in the notification, in a collection 
+   (pick one appropriately according to what the use cases of the collection are) and then find out:
+   
+    a. At what point in time was the temperature lowest.
+    b. At what point in time was the temperature highest.
+    c. What was the avg temperature recorded.
+	
+
+3. Attached is a zip containing html files each one containing the most popular baby names in the US, year-wise and ranked. 
+   Using regex, perform the following operations:
+   
+	a. Find and extract the year and print it
+	b. Extract the names and rank numbers and print them
+	c. Get the names data into a dict and print it
+	d. Using the dict information, find out information about a given name like number of years during which it was in top 10.
+*File Name: html_files_containing_baby_names.zip
+    
+4. Relevant exercises for company interviews:
+
+   Represent a tree in C# and implement traversal methods. Hint:
+   	 class Node<T> {
+	  	T data;
+	  	Node<T> left;
+	 	Node<T> right;
+   	 }
+   	 class Tree {
+      		Node<T> root;
+      		...
+      		// Methods like inorder, preorder, postorder
+  	  }
+  	  
+    • What is the complexity of the traversal algos?
+    • Implement a BST (Binary Search Tree) in C# and print all the elements.
+    • What is the complexity of the printing algo?

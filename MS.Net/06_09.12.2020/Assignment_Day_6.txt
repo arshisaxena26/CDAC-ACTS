@@ -1,29 +1,29 @@
 Assignment Questions: 
 
-1. Do the Practice of View Data with one Action Method.
+Question 1 :
+	1. Do the Practice of View Data with one Action Method.
 
-2. Do the Practice of View Data with two Action Method.
+	2. Do the Practice of View Data with two Action Method.
 
-3. Do the Practice of View Bag with one Action Method.
+	3. Do the Practice of View Bag with one Action Method.
 
-4. Do the Practice of View Bag with two Action Method.
+	4. Do the Practice of View Bag with two Action Method.
 
-5. Do the Practice of Temp Data with one Action Method.
+	5. Do the Practice of Temp Data with one Action Method.
 
-6. Do the Practice of Temp Data with two Action Method.
-   **NOTE: For Assignment: 1 - 6, create 6 Controllers (One for Each).
+	6. Do the Practice of Temp Data with two Action Method.
+	
+**NOTE: For Assignment: 1 - 6, create 6 Controllers (One for Each).
 
-7. HTML Helpers:
-   
-   Create the Method of:
-	Addition.
-	Subtraction.
-	Multiplication.
-	Division.
-
+Question 2: HTML Helpers
+	Create the Method of:
+		Addition.
+		Subtraction.
+		Multiplication.
+		Division.
 NOTE: Create the List and Display as Inline Template.
 
-8. Do the Practice for Strongly Type View discussed in the Session. Code is shared on Google Drive.
+Question 3. Do the Practice for Strongly Type View.
 
-9. Do the Practice for Partial View and View which we discussed in the session. Code is shared on Google Drive.
+Question 4. Do the Practice for Partial View and View.
 

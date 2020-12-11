@@ -1,0 +1,32 @@
+﻿@model EmployeeAddressWebApp.ViewModel.EmpDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<head>
+    <title>@Model.PageTitle</title>
+</head>
+
+<body>
+    <h1>@Model.PageHeader</h1>
+
+    <h3>Employee Information</h3>
+    <div>
+        Employee ID : @Model.Employee.Id <br />
+        Employee Name : @Model.Employee.Name <br />
+        Employee Gender : @Model.Employee.Gender <br />
+        Employee Department : @Model.Employee.Department <br />
+        Employee Salary : @Model.Employee.Salary <br />
+    </div>
+
+    <h3>Employee Address Information</h3>
+    <div>
+        Country : @Model.Address.Country <br />
+        State : @Model.Address.State <br />
+        City : @Model.Address.City <br />
+        PIN : @Model.Address.Pin <br />
+    </div>
+</body>

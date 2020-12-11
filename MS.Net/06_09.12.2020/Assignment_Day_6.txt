@@ -13,7 +13,7 @@ Assignment Questions:
 6. Do the Practice of Temp Data with two Action Method.
    **NOTE: For Assignment: 1 - 6, create 6 Controllers (One for Each).
 
-7. HTML Helpers: Need to the Practice of Inline Template, which is shown in the Training Session.
+7. HTML Helpers:
    
    Create the Method of:
 	Addition.

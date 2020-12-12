@@ -21,8 +21,7 @@ Question 2: HTML Helpers
 		Subtraction.
 		Multiplication.
 		Division.
-NOTE: Create the List and Display as Inline Template.
-
+		
 Question 3. Do the Practice for Strongly Type View.
 
 Question 4. Do the Practice for Partial View and View.

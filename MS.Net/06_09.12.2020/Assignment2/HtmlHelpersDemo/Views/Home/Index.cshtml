@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>HTML Helpers : Inline Template Demo</h3>
+
+@helper Addition(int a, int b)
+{
+    <label>Addition : @(a + b)</label>
+}
+
+@helper Subtraction(int a, int b)
+{
+    <label>Subtraction : @(a - b)</label>
+}
+
+@helper Multiplication(int a, int b)
+{
+    <label>Multiplication : @(a * b)</label>
+}
+
+@helper Division(int a, int b)
+{
+    <label>Division : @(a / b)</label>
+}
+
+<div>
+    <label> @Addition(20, 30) </label>
+</div>
+
+<div>
+    <label> @Subtraction(20, 30) </label>
+</div>
+
+<div>
+    <label> @Multiplication(20, 30) </label>
+</div>
+
+<div>
+    <label> @Division(20, 30) </label>
+</div>
+
+

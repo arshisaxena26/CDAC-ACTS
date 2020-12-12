@@ -1,0 +1,9 @@
+﻿@model IEnumerable<PartialViewsDemo.Models.Product>
+
+@{
+    ViewBag.Title = "ProductInfo";
+}
+
+<h2>ProductInfo</h2>
+
+@Html.Partial("ProductPartialView", Model)

@@ -1,0 +1,47 @@
+﻿@model StronglyTypedViews.Models.Employee
+
+@{
+    ViewBag.Title = "EmpInfo";
+}
+
+<h2>EmpInfo</h2>
+
+@using (Html.BeginForm("EmpInfo", "Employee",FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>@Html.LabelFor(m => Model.Id)</td>
+        <td>@Html.TextBoxFor(m => Model.Id)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Name)</td>
+        <td>@Html.TextBoxFor(m => Model.Name)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Gender)</td>
+        <td>
+            Male : @Html.RadioButtonFor(m => Model.Gender, "Male", new { @checked = "checked" })
+            Female : @Html.RadioButtonFor(m => Model.Gender, "Female", true)
+        </td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Phone)</td>
+        <td>@Html.TextBoxFor(m => Model.Phone)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Address)</td>
+        <td>@Html.EditorFor(m => Model.Address)</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="submit" />
+        </td>
+    </tr>
+</table>
+}
+

@@ -1,0 +1,41 @@
+﻿@model EmployeeMVC_CRUD.Models.Employee
+
+@{
+    ViewBag.Title = "GetEmployeeById";
+}
+
+<h2>Employee Information</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th></th>
+    </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Salary)
+            </td>
+        </tr>
+
+</table>

@@ -1,0 +1,11 @@
+Assignment Question:
+
+Q1. Create a MVC Application to Test Action Filters. (Authentication,Authorization)
+	1.1 Create User Class
+	1.3 Create LoginController in Login Folder
+	1.4 Create AuthenticationFilter class in RouteProtection Folder
+	1.5 Create AccountController in Controllers Folder
+	1.6 Create ContactController and add two functions :
+		1. NonSecureMethod : Allows Anonymous
+		2. SecureMethod : Authorization Required
+	1.7 Create Views.

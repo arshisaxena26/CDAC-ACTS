@@ -3,7 +3,3 @@ Assignment Questions: ADO.NET
 Q1. Create a Console Application to Test Database Connectivity with Connected Mode.
 
 Q2. Create a Console Application to Test Database Connectivity with Disconnected Mode.
-
-Assignment Questions: LINQ
-
-Q3. Create a Console Application to Test LINQ.

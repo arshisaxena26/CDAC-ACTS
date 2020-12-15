@@ -1,0 +1,17 @@
+Assignment Questions: LINQ
+
+Q1. Create a Console Application to Test LINQ.
+	1.1 Display Names Containing 'a'
+	1.2 Display Employees older than 30
+	1.3 Check and Display occurence of a particular string in List of strings
+	1.4 Display Customers Ordered By Name
+	1.5 Display Customers Ordered By Name In Descending Order
+	1.6 Display Customers Ordered By Name And Age
+	1.7 Display Sum of List of Integers
+	1.8 Display Even Integers in the List of Integers
+	1.9 Display Odd Integers in the List of Integers
+	1.10 Display Distinct List of Integers
+	1.11 Display Distinct List of Strings
+	1.12 Display Common strings from two string lists using Join
+
+Q2. Create a Console Application to use Func and Action Delegates.

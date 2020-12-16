@@ -1,0 +1,13 @@
+Assignment Question : Create a MVC Application with Code First (Linq to Sql) Approach using inbuilt MSSQL.
+	1.1 Create New Empty MVC Project and Add Entity Framework Reference
+	1.2 Create a Model Class "Friend" with following properties : FriendID,FriendName,Place
+	1.3 Add Following Validations on Friend Class properties:
+		1. FriendID - Required attribute.
+		2. FriendName - Required attribute displaying an error message when empty
+		3. Place - Restricted to Maximum Character = 25
+	1.4 Create a Folder and add DatabaseContext class.
+	1.5 Add a Controller and perform CRUD operations :
+		1. Create a Index (List of Friends) View and Method in Friend controller
+		2. Create a Method and View to Insert Record using HttpPost - Validate Model State before insertion
+		3. Create an Edit Method and View to Update Record using HttpPost
+		4. Create Delete view and Method to delete a friend in post method of Controller

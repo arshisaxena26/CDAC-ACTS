@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51269/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51269/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sub_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sub" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Mul_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mul" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Mul_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MulResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Div_InputMessage">
+    <wsdl:part name="parameters" element="tns:Div" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Div_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_Name_InputMessage">
+    <wsdl:part name="parameters" element="tns:Name" />
+  </wsdl:message>
+  <wsdl:message name="IService2_Name_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_Email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Email" />
+  </wsdl:message>
+  <wsdl:message name="IService2_Email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Add" message="tns:IService1_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddResponse" message="tns:IService1_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Sub" message="tns:IService1_Sub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SubResponse" message="tns:IService1_Sub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Mul" message="tns:IService1_Mul_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MulResponse" message="tns:IService1_Mul_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Div" message="tns:IService1_Div_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DivResponse" message="tns:IService1_Div_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IService2">
+    <wsdl:operation name="Name">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/Name" message="tns:IService2_Name_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/NameResponse" message="tns:IService2_Name_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Email">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/Email" message="tns:IService2_Email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/EmailResponse" message="tns:IService2_Email_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/IService1/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap:operation soapAction="http://tempuri.org/IService1/Sub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap:operation soapAction="http://tempuri.org/IService1/Mul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <soap:operation soapAction="http://tempuri.org/IService1/Div" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IService2" type="tns:IService2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Name">
+      <soap:operation soapAction="http://tempuri.org/IService2/Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Email">
+      <soap:operation soapAction="http://tempuri.org/IService2/Email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:51269/Service1.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IService2" binding="tns:BasicHttpBinding_IService2">
+      <soap:address location="http://localhost:51269/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

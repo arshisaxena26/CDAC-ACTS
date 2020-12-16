@@ -1,0 +1,6 @@
+INSERT INTO Employees VALUES("Bob Johnson",230000,"Manager","Male");
+INSERT INTO Employees VALUES("Rob Johnson",240000,"Team Lead","Male");
+INSERT INTO Employees VALUES("Stacy Johnson",250000,"Team Lead","Female");
+INSERT INTO Employees VALUES("Fiona Johnson",260000,"Manager","Female");
+INSERT INTO Employees VALUES("Gracy Johnson",270000,"Team Lead","Female");
+go

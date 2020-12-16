@@ -1,0 +1,48 @@
+PG-DAC 2020
+MS .NET Official INTERNAL Assignment
+
+1. Create a WCF Service with two different interface and having a Single Binding using basichttpbinding.
+	1.1 Create a WCF Service Application Project and add the following methods in first Interface :
+		1.int Add(int a,int b)
+		2.int Sub(int a,int b)
+		3.int Mul(int a,int b)
+		4.int Div(int a,int b)
+	1.2 Add following methods in Second Interface :
+		1.string Name(string name)
+		2.string Email(string email)
+	1.3 Build Application
+	1.3 Add a Console Application to the Project - Host
+	1.4 Add System.ServiceModel Reference and WCF Service Application Reference to the Host
+	1.5 Add <system.serviceModel> tags to App.config File--use appropriate configuration
+	1.6 Build Application
+	1.7 Run Service1.svc file in browser and copy first URL.
+	1.8 Create a Console Application in NEW PROJECT - Client
+	1.9 Add SERVICE Reference : copied URL from Service1.svc
+	1.10 Access Service Methods via Client Application.
+
+2. Create a crud Operations using Entity Framework with database having the Employee table
+	EmpId
+	EmpName
+	EmpSal
+	EmpPosition
+	EmpGender
+
+	2.1 Add Entity Framework Reference to the newly created Empty Web API Project.
+	2.2 Add Relevant Tags to Web.config File.
+	2.3 Create Model Classes (Employee and DatabaseContext)
+	2.4 Open Package Manager Console and write following commands for Database Connectivity:
+		1. Enable-Migrations
+		2. add-migration initial
+		3. update-database -verbose
+		4. install-package newtonsoft.json -version "5.0.6"
+	2.5 Insert Records in the table (Import Dependencies/employee_schema.sql)
+	2.6 Create Controller and Add Functions for the following :
+		1. Get All Employees : /api/Employee
+		2. Get Employee By Id : /api/Employee/1
+		3. Insert New Employee : 
+			POST request : /api/Employee
+			Body,form-urlencoded : Add Keys and Values (EmpName,EmpSal,EmpPosition and EmpGender)
+		4. Update Employee Record :
+			PUT request : /api/Employee/1
+			Body,form-urlencoded : Add Keys and Values (EmpId,EmpName,EmpSal,EmpPosition and EmpGender)
+		5. Delete Employee Record : /api/Employee/1

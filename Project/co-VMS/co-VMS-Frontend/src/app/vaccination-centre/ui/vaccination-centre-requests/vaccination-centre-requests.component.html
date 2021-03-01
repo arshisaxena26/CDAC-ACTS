@@ -1,0 +1,30 @@
+<div class="request-container">
+  <div class="col-lg-8 col-md-8 col-12 mx-auto">
+    <div class="card mt-1 pl-5 pr-5 pb-5">
+      <div class="card-body text-left">
+        <div class="form-group row">
+          <label for="adhaarNumber"><b>Adhaar Card Number</b></label>
+          <input type="text" class="form-control" placeholder="Enter Adhaar Number" [(ngModel)]="adhaarNumber" />
+          <input
+            type="button"
+            class="btn btn-primary mt-3"
+            value="Search Beneficiary"
+            (click)="getBeneficiary(adhaarNumber)"
+          /><br /><br />
+        </div>
+        <div class="mt-4" *ngIf="showDetails">
+          <p><b>Name : </b>{{ name }}</p>
+          <p><b>Age : </b>{{ age }}</p>
+          <p><b>Appointment Date : </b>{{ appointmentDate }}</p>
+          <p><b>Status : </b>{{ status }}</p>
+          <input
+            type="button"
+            value="Vaccinate"
+            class="btn btn-success mt-1"
+            (click)="vaccinate(adhaarNumber)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

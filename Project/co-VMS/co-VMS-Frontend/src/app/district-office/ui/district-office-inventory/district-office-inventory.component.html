@@ -1,0 +1,16 @@
+<div class="inventory-container">
+  <div class="col-lg-8 col-md-8 col-12 mx-auto">
+    <div class="card mt-4 pl-5 pr-5 pb-5 py-3">
+      <div class="card-body">
+        <label for="capacity"><b>Stock</b></label>
+        <input type="number" class="form-control" [(ngModel)]="stock" />
+        <input
+          type="button"
+          class="btn btn-primary mt-3"
+          (click)="updateStock()"
+          value="Update"
+        />
+      </div>
+    </div>
+  </div>
+</div>

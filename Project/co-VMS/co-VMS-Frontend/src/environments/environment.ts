@@ -1,0 +1,21 @@
+export const environment = {
+  production: false,
+  baseURL: 'http://localhost:8080/',
+  signup: 'register',
+  authenticate: 'authenticate',
+  admin: 'admin',
+  beneficiary: 'beneficiary',
+  applyForVaccination: 'apply_for_vaccination',
+  feedback: 'feedback',
+  state: 'lists/state_list',
+  district: 'lists/district_list/',
+  covid: 'covid/',
+  vaccinationCentre: 'vaccination_centre',
+  inventory: 'inventory',
+  requests: 'request',
+  reports: 'reports',
+  applications: 'applications',
+  centres: 'centres',
+  districtOffice: 'district_office',
+  appointment: 'appointment'
+};

@@ -1,0 +1,28 @@
+.centre-list-container {
+  padding-left: 250px;
+  padding-top: 25px;
+  background-color: burlywood;
+  height: 90.5vh;
+}
+
+.table {
+  width: 95%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  opacity: 85%;
+}
+
+.btn{
+  color: whitesmoke;
+}
+
+.form-control {
+  width: 40%;
+  background-color: whitesmoke;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}

@@ -24,6 +24,6 @@ public class JsonParser implements CovidDataMapper {
         ObjectMapper mapper = new ObjectMapper();
         TypeFactory typeFactory = mapper.getTypeFactory();
         MapType mapType = typeFactory.constructMapType(HashMap.class, String.class, StateData.class);
-        jsonData = mapper.readValue(new URL("https://api.covid19india.org/state_district_wise.json"), mapType);
+        jsonData = mapper.readValue(new URL("https://data.covid19india.org/state_district_wise.json"), mapType);
     }
 }

@@ -1,0 +1,40 @@
+1. Fetch Master branch from remote : 
+  - git fetch origin master:master
+
+2. Create branch from master : 
+  - git checkout master
+  - git checkout -b <branch>        #This creates a new branch and checkouts to that branch
+
+3. Delete branch from local :
+  - git branch -D <branch>
+  
+4. Checkout to Latest master branch from remote :
+  - git branch -D master             #Delete local branch
+  - git fetch origin master:master   #Fetch latest branch from remote
+  - git checkout master
+  
+5. Stash your changes                #Usually required when switching branches with code changes
+  - git stash
+  - git stash pop                    #Brings back the stashed changes
+
+6. Rebase with Latest Master
+  - git branch -D master
+  - git fetch origin master:master
+  - git rebase -i master --no-ff    #Pick relevant commits and save (:wq)
+  *In case of conflicts, after resolving conflicts stage the files
+    - git rebase --continue
+  - git log                         #Verify commit history
+  - git push -f origin <branch>
+
+7. Cherry-pick commits              #Usually required when code changes are to be added to another branch
+  - git checkout <branch-where-commit-is-to-be-added>
+  - git cherry-pick <commit-id>     #Branch where the commit is should be present to avoid "Bad Revision" Error
+  *In case of conflicts, after resolving conflicts stage the files
+    - git cherry-pick --continue
+  - git log                         #Verify commit history
+  - git push origin <branch>
+  
+8. Squash/Fixup
+  - git rebase -i HEAD~<number of commits>  #Pick the first commit and replace pick to fixup in other commits and save
+  - git log
+  - git push -f origin <branch>
